@@ -436,6 +436,18 @@ OPTIONS (
 ```
 ![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/88f8d62d-7b20-428b-9e1b-075f24601163)
 
+![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/49784e62-e692-4b39-878f-8cf93bdd7242)
+
+
+### Regular Internal Table
+
+You may import an external table into BQ as a regular internal table by copying the contents of the external table into a new internal table. For example:
+```
+CREATE OR REPLACE TABLE taxi-rides-ny.nytaxi.yellow_tripdata_non_partitoned AS
+SELECT * FROM taxi-rides-ny.nytaxi.external_yellow_tripdata;
+```
+
+
 
 
 
