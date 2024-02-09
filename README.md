@@ -493,8 +493,6 @@ Copying file://yellow_tripdata_2020-12.csv.gz [Content-Type=text/csv]...
 - [24/24 files][  1.9 GiB/  1.9 GiB] 100% Done 169.3 MiB/s ETA 00:00:00         
 Operation completed over 24 objects/1.9 GiB.  
 ```
-
-```
 ![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/971a2190-9115-49fc-bde6-ac8007538a90)
 ![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/798decc0-6f92-4c1c-a3f8-bc698cc3e082)
 
@@ -511,6 +509,7 @@ OPTIONS (
   format = 'CSV',
   uris = ['gs://de-zoomcamp-garjita-bucket/trip_data/yellow_tripdata_2019-*.csv.gz', 'gs://de-zoomcamp-garjita-bucket/trip_data/yellow_tripdata_2020-*.csv.gz']
 );
+```
 
 ![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/ade14ff9-6307-4ae4-9ca3-c6d5ec1ca703)
 ![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/35ce1370-3cd6-4aef-a2b2-862a11b50499)
