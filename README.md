@@ -324,7 +324,7 @@ yellow_tripdata_2020-12.parquet    100%[========================================
 
 2024-02-09 09:31:12 (9.16 MB/s) - ‘yellow_tripdata_2020-12.parquet’ saved [23020036/23020036]
 ```
-
+```
 garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ ls -al
 total 1597312
 drwxr-xr-x 10 garjita_ds garjita_ds      4096 Feb  9 09:31 .
@@ -380,7 +380,7 @@ drwxr-xr-x  2 garjita_ds garjita_ds      4096 Feb  2 02:38 .terraform.d
 -rw-r--r--  1 garjita_ds garjita_ds  26306876 Jun 30  2022 yellow_tripdata_2020-10.parquet
 -rw-r--r--  1 garjita_ds garjita_ds  23583368 Jun 30  2022 yellow_tripdata_2020-11.parquet
 -rw-r--r--  1 garjita_ds garjita_ds  23020036 Jun 30  2022 yellow_tripdata_2020-12.parquet
-
+```
 
 
 
