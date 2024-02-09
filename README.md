@@ -32,7 +32,8 @@ Files : yellow_tripdata_2019-*.parquet & yellow_tripdata_2020-*.parquet
 **wget**
 
 ```
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-01.csv.gz 
+$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-01.csv.gz
+```
 --2024-02-09 12:33:17--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-01.csv.gz
 Resolving github.com (github.com)... 20.205.243.166
 Connecting to github.com (github.com)|20.205.243.166|:443... connected.
@@ -49,7 +50,9 @@ yellow_tripdata_2019-01.csv.gz     100%[========================================
 
 2024-02-09 12:33:19 (209 MB/s) - ‘yellow_tripdata_2019-01.csv.gz’ saved [134445150/134445150]
 
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-02.csv.gz 
+```
+$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-02.csv.gz 
+```
 --2024-02-09 12:34:18--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-02.csv.gz
 Resolving github.com (github.com)... 20.205.243.166
 Connecting to github.com (github.com)|20.205.243.166|:443... connected.
@@ -66,7 +69,9 @@ yellow_tripdata_2019-02.csv.gz     100%[========================================
 
 2024-02-09 12:34:28 (15.9 MB/s) - ‘yellow_tripdata_2019-02.csv.gz’ saved [128275506/128275506]
 
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-03.csv.gz 
+```
+$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-03.csv.gz 
+```
 --2024-02-09 12:34:36--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-03.csv.gz
 Resolving github.com (github.com)... 20.205.243.166
 Connecting to github.com (github.com)|20.205.243.166|:443... connected.
@@ -83,7 +88,7 @@ yellow_tripdata_2019-03.csv.gz     100%[========================================
 
 2024-02-09 12:34:46 (15.6 MB/s) - ‘yellow_tripdata_2019-03.csv.gz’ saved [143692931/143692931]
 
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-04.csv.gz 
+$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-04.csv.gz 
 --2024-02-09 12:34:57--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-04.csv.gz
 Resolving github.com (github.com)... 20.205.243.166
 Connecting to github.com (github.com)|20.205.243.166|:443... connected.
@@ -100,7 +105,7 @@ yellow_tripdata_2019-04.csv.gz     100%[========================================
 
 2024-02-09 12:35:05 (16.5 MB/s) - ‘yellow_tripdata_2019-04.csv.gz’ saved [136233383/136233383]
 
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-05.csv.gz 
+$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-05.csv.gz 
 --2024-02-09 12:35:11--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-05.csv.gz
 Resolving github.com (github.com)... 20.205.243.166
 Connecting to github.com (github.com)|20.205.243.166|:443... connected.
@@ -117,7 +122,7 @@ yellow_tripdata_2019-05.csv.gz     100%[========================================
 
 2024-02-09 12:35:13 (286 MB/s) - ‘yellow_tripdata_2019-05.csv.gz’ saved [138963071/138963071]
 
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-06.csv.gz 
+$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-06.csv.gz 
 --2024-02-09 12:35:23--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-06.csv.gz
 Resolving github.com (github.com)... 20.205.243.166
 Connecting to github.com (github.com)|20.205.243.166|:443... connected.
@@ -134,7 +139,7 @@ yellow_tripdata_2019-06.csv.gz     100%[========================================
 
 2024-02-09 12:35:25 (227 MB/s) - ‘yellow_tripdata_2019-06.csv.gz’ saved [127685708/127685708]
 
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-07.csv.gz 
+$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-07.csv.gz 
 --2024-02-09 12:35:32--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-07.csv.gz
 Resolving github.com (github.com)... 20.205.243.166
 Connecting to github.com (github.com)|20.205.243.166|:443... connected.
@@ -151,7 +156,7 @@ yellow_tripdata_2019-07.csv.gz     100%[========================================
 
 2024-02-09 12:35:41 (14.3 MB/s) - ‘yellow_tripdata_2019-07.csv.gz’ saved [115817922/115817922]
 
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-08.csv.gz 
+$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-08.csv.gz 
 --2024-02-09 12:35:48--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-08.csv.gz
 Resolving github.com (github.com)... 20.205.243.166
 Connecting to github.com (github.com)|20.205.243.166|:443... connected.
@@ -168,7 +173,7 @@ yellow_tripdata_2019-08.csv.gz     100%[========================================
 
 2024-02-09 12:35:56 (15.2 MB/s) - ‘yellow_tripdata_2019-08.csv.gz’ saved [111465721/111465721]
 
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-09.csv.gz 
+$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-09.csv.gz 
 --2024-02-09 12:36:03--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-09.csv.gz
 Resolving github.com (github.com)... 20.205.243.166
 Connecting to github.com (github.com)|20.205.243.166|:443... connected.
@@ -185,7 +190,7 @@ yellow_tripdata_2019-09.csv.gz     100%[========================================
 
 2024-02-09 12:36:11 (17.4 MB/s) - ‘yellow_tripdata_2019-09.csv.gz’ saved [120807645/120807645]
 
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-10.csv.gz 
+$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-10.csv.gz 
 --2024-02-09 12:36:24--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-10.csv.gz
 Resolving github.com (github.com)... 20.205.243.166
 Connecting to github.com (github.com)|20.205.243.166|:443... connected.
@@ -202,7 +207,7 @@ yellow_tripdata_2019-10.csv.gz     100%[========================================
 
 2024-02-09 12:36:26 (211 MB/s) - ‘yellow_tripdata_2019-10.csv.gz’ saved [132413025/132413025]
 
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-11.csv.gz 
+$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-11.csv.gz 
 --2024-02-09 12:36:36--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-11.csv.gz
 Resolving github.com (github.com)... 20.205.243.166
 Connecting to github.com (github.com)|20.205.243.166|:443... connected.
@@ -219,7 +224,7 @@ yellow_tripdata_2019-11.csv.gz     100%[========================================
 
 2024-02-09 12:36:38 (238 MB/s) - ‘yellow_tripdata_2019-11.csv.gz’ saved [125953067/125953067]
 
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-12.csv.gz 
+$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-12.csv.gz 
 --2024-02-09 12:36:52--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-12.csv.gz
 Resolving github.com (github.com)... 20.205.243.166
 Connecting to github.com (github.com)|20.205.243.166|:443... connected.
@@ -238,7 +243,7 @@ yellow_tripdata_2019-12.csv.gz     100%[========================================
 ```
 
 ```
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ gsutil -m cp yellow* gs://de-zoomcamp-garjita-bucket/trip_data
+$ gsutil -m cp yellow* gs://de-zoomcamp-garjita-bucket/trip_data
 Copying file://yellow_tripdata_2019-01.csv.gz [Content-Type=text/csv]...
 Copying file://yellow_tripdata_2019-03.csv.gz [Content-Type=text/csv]...        
 Copying file://yellow_tripdata_2019-06.csv.gz [Content-Type=text/csv]...        
@@ -257,7 +262,7 @@ Operation completed over 12 objects/1.4 GiB.
 
 
 ```
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-01.csv.gz 
+$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-01.csv.gz 
 --2024-02-09 12:49:30--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-01.csv.gz
 Resolving github.com (github.com)... 20.205.243.166
 Connecting to github.com (github.com)|20.205.243.166|:443... connected.
@@ -274,7 +279,7 @@ yellow_tripdata_2020-01.csv.gz     100%[========================================
 
 2024-02-09 12:49:32 (273 MB/s) - ‘yellow_tripdata_2020-01.csv.gz’ saved [116338814/116338814]
 
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-02.csv.gz 
+$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-02.csv.gz 
 --2024-02-09 12:49:38--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-02.csv.gz
 Resolving github.com (github.com)... 20.205.243.166
 Connecting to github.com (github.com)|20.205.243.166|:443... connected.
@@ -291,7 +296,7 @@ yellow_tripdata_2020-02.csv.gz     100%[========================================
 
 2024-02-09 12:49:40 (287 MB/s) - ‘yellow_tripdata_2020-02.csv.gz’ saved [114701110/114701110]
 
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-03.csv.gz 
+$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-03.csv.gz 
 --2024-02-09 12:49:44--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-03.csv.gz
 Resolving github.com (github.com)... 20.205.243.166
 Connecting to github.com (github.com)|20.205.243.166|:443... connected.
@@ -308,7 +313,7 @@ yellow_tripdata_2020-03.csv.gz     100%[========================================
 
 2024-02-09 12:49:46 (275 MB/s) - ‘yellow_tripdata_2020-03.csv.gz’ saved [55004095/55004095]
 
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-04.csv.gz 
+$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-04.csv.gz 
 --2024-02-09 12:49:53--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-04.csv.gz
 Resolving github.com (github.com)... 20.205.243.166
 Connecting to github.com (github.com)|20.205.243.166|:443... connected.
@@ -325,7 +330,7 @@ yellow_tripdata_2020-04.csv.gz     100%[========================================
 
 2024-02-09 12:49:55 (210 MB/s) - ‘yellow_tripdata_2020-04.csv.gz’ saved [4429528/4429528]
 
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-05.csv.gz 
+$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-05.csv.gz 
 --2024-02-09 12:50:02--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-05.csv.gz
 Resolving github.com (github.com)... 20.205.243.166
 Connecting to github.com (github.com)|20.205.243.166|:443... connected.
@@ -342,7 +347,7 @@ yellow_tripdata_2020-05.csv.gz     100%[========================================
 
 2024-02-09 12:50:04 (225 MB/s) - ‘yellow_tripdata_2020-05.csv.gz’ saved [6528512/6528512]
 
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-06.csv.gz 
+$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-06.csv.gz 
 --2024-02-09 12:50:09--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-06.csv.gz
 Resolving github.com (github.com)... 20.205.243.166
 Connecting to github.com (github.com)|20.205.243.166|:443... connected.
@@ -359,7 +364,7 @@ yellow_tripdata_2020-06.csv.gz     100%[========================================
 
 2024-02-09 12:50:11 (222 MB/s) - ‘yellow_tripdata_2020-06.csv.gz’ saved [10206684/10206684]
 
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-07.csv.gz 
+$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-07.csv.gz 
 --2024-02-09 12:50:18--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-07.csv.gz
 Resolving github.com (github.com)... 20.205.243.166
 Connecting to github.com (github.com)|20.205.243.166|:443... connected.
@@ -376,7 +381,7 @@ yellow_tripdata_2020-07.csv.gz     100%[========================================
 
 2024-02-09 12:50:19 (253 MB/s) - ‘yellow_tripdata_2020-07.csv.gz’ saved [14720186/14720186]
 
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-08.csv.gz 
+$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-08.csv.gz 
 --2024-02-09 12:50:25--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-08.csv.gz
 Resolving github.com (github.com)... 20.205.243.166
 Connecting to github.com (github.com)|20.205.243.166|:443... connected.
@@ -393,7 +398,7 @@ yellow_tripdata_2020-08.csv.gz     100%[========================================
 
 2024-02-09 12:50:26 (245 MB/s) - ‘yellow_tripdata_2020-08.csv.gz’ saved [18483087/18483087]
 
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-09.csv.gz 
+$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-09.csv.gz 
 --2024-02-09 12:50:33--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-09.csv.gz
 Resolving github.com (github.com)... 20.205.243.166
 Connecting to github.com (github.com)|20.205.243.166|:443... connected.
@@ -410,7 +415,7 @@ yellow_tripdata_2020-09.csv.gz     100%[========================================
 
 2024-02-09 12:50:34 (258 MB/s) - ‘yellow_tripdata_2020-09.csv.gz’ saved [24510334/24510334]
 
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-10.csv.gz 
+$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-10.csv.gz 
 --2024-02-09 12:50:40--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-10.csv.gz
 Resolving github.com (github.com)... 20.205.243.166
 Connecting to github.com (github.com)|20.205.243.166|:443... connected.
@@ -427,7 +432,7 @@ yellow_tripdata_2020-10.csv.gz     100%[========================================
 
 2024-02-09 12:50:41 (239 MB/s) - ‘yellow_tripdata_2020-10.csv.gz’ saved [30650867/30650867]
 
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-11.csv.gz 
+$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-11.csv.gz 
 --2024-02-09 12:50:50--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-11.csv.gz
 Resolving github.com (github.com)... 20.205.243.166
 Connecting to github.com (github.com)|20.205.243.166|:443... connected.
@@ -444,7 +449,7 @@ yellow_tripdata_2020-11.csv.gz     100%[========================================
 
 2024-02-09 12:50:53 (11.5 MB/s) - ‘yellow_tripdata_2020-11.csv.gz’ saved [27531023/27531023]
 
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-12.csv.gz 
+$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-12.csv.gz 
 --2024-02-09 12:53:37--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-12.csv.gz
 Resolving github.com (github.com)... 20.205.243.166
 Connecting to github.com (github.com)|20.205.243.166|:443... connected.
@@ -465,7 +470,7 @@ yellow_tripdata_2020-12.csv.gz     100%[========================================
 
 **Copy files into a bucket**
 ```
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ gsutil -m cp yellow*.csv.gz gs://de-zoomcamp-garjita-bucket/trip_data
+$ gsutil -m cp yellow*.csv.gz gs://de-zoomcamp-garjita-bucket/trip_data
 Copying file://yellow_tripdata_2019-01.csv.gz [Content-Type=text/csv]...
 Copying file://yellow_tripdata_2019-03.csv.gz [Content-Type=text/csv]...        
 Copying file://yellow_tripdata_2019-02.csv.gz [Content-Type=text/csv]...        
