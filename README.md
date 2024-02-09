@@ -33,7 +33,6 @@ Files : yellow_tripdata_2019-*.parquet & yellow_tripdata_2020-*.parquet
 
 ```
 $ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-01.csv.gz
-```
 --2024-02-09 12:33:17--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-01.csv.gz
 Resolving github.com (github.com)... 20.205.243.166
 Connecting to github.com (github.com)|20.205.243.166|:443... connected.
@@ -49,10 +48,10 @@ Saving to: ‘yellow_tripdata_2019-01.csv.gz’
 yellow_tripdata_2019-01.csv.gz     100%[==============================================================>] 128.22M   209MB/s    in 0.6s    
 
 2024-02-09 12:33:19 (209 MB/s) - ‘yellow_tripdata_2019-01.csv.gz’ saved [134445150/134445150]
+```
 
 ```
 $ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-02.csv.gz 
-```
 --2024-02-09 12:34:18--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-02.csv.gz
 Resolving github.com (github.com)... 20.205.243.166
 Connecting to github.com (github.com)|20.205.243.166|:443... connected.
@@ -68,10 +67,10 @@ Saving to: ‘yellow_tripdata_2019-02.csv.gz’
 yellow_tripdata_2019-02.csv.gz     100%[==============================================================>] 122.33M  16.1MB/s    in 7.7s    
 
 2024-02-09 12:34:28 (15.9 MB/s) - ‘yellow_tripdata_2019-02.csv.gz’ saved [128275506/128275506]
+```
 
 ```
 $ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-03.csv.gz 
-```
 --2024-02-09 12:34:36--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-03.csv.gz
 Resolving github.com (github.com)... 20.205.243.166
 Connecting to github.com (github.com)|20.205.243.166|:443... connected.
@@ -87,7 +86,8 @@ Saving to: ‘yellow_tripdata_2019-03.csv.gz’
 yellow_tripdata_2019-03.csv.gz     100%[==============================================================>] 137.04M  17.6MB/s    in 8.8s    
 
 2024-02-09 12:34:46 (15.6 MB/s) - ‘yellow_tripdata_2019-03.csv.gz’ saved [143692931/143692931]
-
+```
+```
 $ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-04.csv.gz 
 --2024-02-09 12:34:57--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-04.csv.gz
 Resolving github.com (github.com)... 20.205.243.166
@@ -121,7 +121,8 @@ Saving to: ‘yellow_tripdata_2019-05.csv.gz’
 yellow_tripdata_2019-05.csv.gz     100%[==============================================================>] 132.53M   286MB/s    in 0.5s    
 
 2024-02-09 12:35:13 (286 MB/s) - ‘yellow_tripdata_2019-05.csv.gz’ saved [138963071/138963071]
-
+```
+```
 $ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-06.csv.gz 
 --2024-02-09 12:35:23--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-06.csv.gz
 Resolving github.com (github.com)... 20.205.243.166
