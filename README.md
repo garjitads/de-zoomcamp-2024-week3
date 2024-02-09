@@ -32,394 +32,472 @@ Files : yellow_tripdata_2019-*.parquet & yellow_tripdata_2020-*.parquet
 **wget**
 
 ```
-Welcome to Cloud Shell! Type "help" to get started.
-Your Cloud Platform project in this session is set to dtc-de-course-2024-411803.
-Use “gcloud config set project [PROJECT_ID]” to change to a different project.
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2019-01.parquet
---2024-02-09 09:15:28--  https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2019-01.parquet
-Resolving d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)... 18.161.108.231, 18.161.108.77, 18.161.108.184, ...
-Connecting to d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)|18.161.108.231|:443... connected.
+garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-01.csv.gz 
+--2024-02-09 12:33:17--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-01.csv.gz
+Resolving github.com (github.com)... 20.205.243.166
+Connecting to github.com (github.com)|20.205.243.166|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/afb2f0a6-bb8b-4958-9818-834bda641e9e?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T123317Z&X-Amz-Expires=300&X-Amz-Signature=4f5dfc630c79541ecaaa36b83a9250acb557c94364877b04f5ba747dcf5cb20e&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2019-01.csv.gz&response-content-type=application%2Foctet-stream [following]
+--2024-02-09 12:33:17--  https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/afb2f0a6-bb8b-4958-9818-834bda641e9e?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T123317Z&X-Amz-Expires=300&X-Amz-Signature=4f5dfc630c79541ecaaa36b83a9250acb557c94364877b04f5ba747dcf5cb20e&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2019-01.csv.gz&response-content-type=application%2Foctet-stream
+Resolving objects.githubusercontent.com (objects.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
+Connecting to objects.githubusercontent.com (objects.githubusercontent.com)|185.199.108.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
-Length: 110439634 (105M) [application/x-www-form-urlencoded]
-Saving to: ‘yellow_tripdata_2019-01.parquet’
+Length: 134445150 (128M) [application/octet-stream]
+Saving to: ‘yellow_tripdata_2019-01.csv.gz’
 
-yellow_tripdata_2019-01.parquet    100%[==============================================================>] 105.32M  16.6MB/s    in 7.4s    
+yellow_tripdata_2019-01.csv.gz     100%[==============================================================>] 128.22M   209MB/s    in 0.6s    
 
-2024-02-09 09:15:37 (14.2 MB/s) - ‘yellow_tripdata_2019-01.parquet’ saved [110439634/110439634]
+2024-02-09 12:33:19 (209 MB/s) - ‘yellow_tripdata_2019-01.csv.gz’ saved [134445150/134445150]
 
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2019-02.parquet 
---2024-02-09 09:15:46--  https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2019-02.parquet
-Resolving d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)... 18.161.108.231, 18.161.108.77, 18.161.108.184, ...
-Connecting to d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)|18.161.108.231|:443... connected.
+garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-02.csv.gz 
+--2024-02-09 12:34:18--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-02.csv.gz
+Resolving github.com (github.com)... 20.205.243.166
+Connecting to github.com (github.com)|20.205.243.166|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/7e4c9388-9d67-4eed-949c-aa5cebd0c15d?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T123419Z&X-Amz-Expires=300&X-Amz-Signature=a7bc8dee612b71ee6b0ae39ebd1e60ab3461b4e7f9fc4e435766d6b8dde9da2f&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2019-02.csv.gz&response-content-type=application%2Foctet-stream [following]
+--2024-02-09 12:34:19--  https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/7e4c9388-9d67-4eed-949c-aa5cebd0c15d?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T123419Z&X-Amz-Expires=300&X-Amz-Signature=a7bc8dee612b71ee6b0ae39ebd1e60ab3461b4e7f9fc4e435766d6b8dde9da2f&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2019-02.csv.gz&response-content-type=application%2Foctet-stream
+Resolving objects.githubusercontent.com (objects.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
+Connecting to objects.githubusercontent.com (objects.githubusercontent.com)|185.199.108.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
-Length: 103356025 (99M) [application/x-www-form-urlencoded]
-Saving to: ‘yellow_tripdata_2019-02.parquet’
+Length: 128275506 (122M) [application/octet-stream]
+Saving to: ‘yellow_tripdata_2019-02.csv.gz’
 
-yellow_tripdata_2019-02.parquet    100%[==============================================================>]  98.57M  16.3MB/s    in 7.1s    
+yellow_tripdata_2019-02.csv.gz     100%[==============================================================>] 122.33M  16.1MB/s    in 7.7s    
 
-2024-02-09 09:15:54 (13.9 MB/s) - ‘yellow_tripdata_2019-02.parquet’ saved [103356025/103356025]
+2024-02-09 12:34:28 (15.9 MB/s) - ‘yellow_tripdata_2019-02.csv.gz’ saved [128275506/128275506]
 
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2019-03.parquet
---2024-02-09 09:16:32--  https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2019-03.parquet
-Resolving d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)... 18.161.108.141, 18.161.108.231, 18.161.108.77, ...
-Connecting to d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)|18.161.108.141|:443... connected.
+garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-03.csv.gz 
+--2024-02-09 12:34:36--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-03.csv.gz
+Resolving github.com (github.com)... 20.205.243.166
+Connecting to github.com (github.com)|20.205.243.166|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/79070eb2-7bbb-4ea6-970e-8dbec572f6f4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T123436Z&X-Amz-Expires=300&X-Amz-Signature=e8e51727c800bb965997edd58963d516c2291f129323f70dc6cc395f38421b37&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2019-03.csv.gz&response-content-type=application%2Foctet-stream [following]
+--2024-02-09 12:34:36--  https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/79070eb2-7bbb-4ea6-970e-8dbec572f6f4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T123436Z&X-Amz-Expires=300&X-Amz-Signature=e8e51727c800bb965997edd58963d516c2291f129323f70dc6cc395f38421b37&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2019-03.csv.gz&response-content-type=application%2Foctet-stream
+Resolving objects.githubusercontent.com (objects.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
+Connecting to objects.githubusercontent.com (objects.githubusercontent.com)|185.199.108.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
-Length: 116017372 (111M) [application/x-www-form-urlencoded]
-Saving to: ‘yellow_tripdata_2019-03.parquet’
+Length: 143692931 (137M) [application/octet-stream]
+Saving to: ‘yellow_tripdata_2019-03.csv.gz’
 
-yellow_tripdata_2019-03.parquet    100%[==============================================================>] 110.64M  16.4MB/s    in 7.9s    
+yellow_tripdata_2019-03.csv.gz     100%[==============================================================>] 137.04M  17.6MB/s    in 8.8s    
 
-2024-02-09 09:16:41 (14.1 MB/s) - ‘yellow_tripdata_2019-03.parquet’ saved [116017372/116017372]
+2024-02-09 12:34:46 (15.6 MB/s) - ‘yellow_tripdata_2019-03.csv.gz’ saved [143692931/143692931]
 
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2019-04.parquet
---2024-02-09 09:19:24--  https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2019-04.parquet
-Resolving d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)... 18.161.108.141, 18.161.108.77, 18.161.108.231, ...
-Connecting to d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)|18.161.108.141|:443... connected.
+garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-04.csv.gz 
+--2024-02-09 12:34:57--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-04.csv.gz
+Resolving github.com (github.com)... 20.205.243.166
+Connecting to github.com (github.com)|20.205.243.166|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/2e003b08-ce42-487d-b666-12f43d408d18?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T123457Z&X-Amz-Expires=300&X-Amz-Signature=e6c7c5eff86f80a51f7556d30efe9efa63923a3cd4bb9acc12e5f5fec18d170c&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2019-04.csv.gz&response-content-type=application%2Foctet-stream [following]
+--2024-02-09 12:34:57--  https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/2e003b08-ce42-487d-b666-12f43d408d18?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T123457Z&X-Amz-Expires=300&X-Amz-Signature=e6c7c5eff86f80a51f7556d30efe9efa63923a3cd4bb9acc12e5f5fec18d170c&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2019-04.csv.gz&response-content-type=application%2Foctet-stream
+Resolving objects.githubusercontent.com (objects.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
+Connecting to objects.githubusercontent.com (objects.githubusercontent.com)|185.199.108.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
-Length: 110139137 (105M) [application/x-www-form-urlencoded]
-Saving to: ‘yellow_tripdata_2019-04.parquet’
+Length: 136233383 (130M) [application/octet-stream]
+Saving to: ‘yellow_tripdata_2019-04.csv.gz’
 
-yellow_tripdata_2019-04.parquet    100%[==============================================================>] 105.04M  7.92MB/s    in 9.8s    
+yellow_tripdata_2019-04.csv.gz     100%[==============================================================>] 129.92M  16.5MB/s    in 7.9s    
 
-2024-02-09 09:19:36 (10.7 MB/s) - ‘yellow_tripdata_2019-04.parquet’ saved [110139137/110139137]
+2024-02-09 12:35:05 (16.5 MB/s) - ‘yellow_tripdata_2019-04.csv.gz’ saved [136233383/136233383]
 
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2019-05.parquet
---2024-02-09 09:19:44--  https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2019-05.parquet
-Resolving d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)... 18.161.108.141, 18.161.108.77, 18.161.108.231, ...
-Connecting to d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)|18.161.108.141|:443... connected.
+garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-05.csv.gz 
+--2024-02-09 12:35:11--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-05.csv.gz
+Resolving github.com (github.com)... 20.205.243.166
+Connecting to github.com (github.com)|20.205.243.166|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/29c6f6d1-f585-4ba5-a52b-6b4e0b359542?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T123512Z&X-Amz-Expires=300&X-Amz-Signature=54a6fa5aaf15a81e83497a1bd134dc42c71aa6ab1784120075f845ca8fd52983&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2019-05.csv.gz&response-content-type=application%2Foctet-stream [following]
+--2024-02-09 12:35:12--  https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/29c6f6d1-f585-4ba5-a52b-6b4e0b359542?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T123512Z&X-Amz-Expires=300&X-Amz-Signature=54a6fa5aaf15a81e83497a1bd134dc42c71aa6ab1784120075f845ca8fd52983&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2019-05.csv.gz&response-content-type=application%2Foctet-stream
+Resolving objects.githubusercontent.com (objects.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
+Connecting to objects.githubusercontent.com (objects.githubusercontent.com)|185.199.108.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
-Length: 111478943 (106M) [application/x-www-form-urlencoded]
-Saving to: ‘yellow_tripdata_2019-05.parquet’
+Length: 138963071 (133M) [application/octet-stream]
+Saving to: ‘yellow_tripdata_2019-05.csv.gz’
 
-yellow_tripdata_2019-05.parquet    100%[==============================================================>] 106.31M  16.2MB/s    in 7.7s    
+yellow_tripdata_2019-05.csv.gz     100%[==============================================================>] 132.53M   286MB/s    in 0.5s    
 
-2024-02-09 09:19:53 (13.8 MB/s) - ‘yellow_tripdata_2019-05.parquet’ saved [111478943/111478943]
+2024-02-09 12:35:13 (286 MB/s) - ‘yellow_tripdata_2019-05.csv.gz’ saved [138963071/138963071]
 
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2019-06.parquet
---2024-02-09 09:20:02--  https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2019-06.parquet
-Resolving d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)... 18.161.108.141, 18.161.108.77, 18.161.108.184, ...
-Connecting to d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)|18.161.108.141|:443... connected.
+garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-06.csv.gz 
+--2024-02-09 12:35:23--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-06.csv.gz
+Resolving github.com (github.com)... 20.205.243.166
+Connecting to github.com (github.com)|20.205.243.166|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/88c34148-b51d-46a9-bbb5-a5df806d7cfc?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T123523Z&X-Amz-Expires=300&X-Amz-Signature=e5dd53743c5bd730809cc33643203fe47d4e17b14b0334dcf58e80aa1bbdd961&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2019-06.csv.gz&response-content-type=application%2Foctet-stream [following]
+--2024-02-09 12:35:24--  https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/88c34148-b51d-46a9-bbb5-a5df806d7cfc?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T123523Z&X-Amz-Expires=300&X-Amz-Signature=e5dd53743c5bd730809cc33643203fe47d4e17b14b0334dcf58e80aa1bbdd961&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2019-06.csv.gz&response-content-type=application%2Foctet-stream
+Resolving objects.githubusercontent.com (objects.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
+Connecting to objects.githubusercontent.com (objects.githubusercontent.com)|185.199.108.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
-Length: 102903344 (98M) [application/x-www-form-urlencoded]
-Saving to: ‘yellow_tripdata_2019-06.parquet’
+Length: 127685708 (122M) [application/octet-stream]
+Saving to: ‘yellow_tripdata_2019-06.csv.gz’
 
-yellow_tripdata_2019-06.parquet    100%[==============================================================>]  98.14M  16.2MB/s    in 7.1s    
+yellow_tripdata_2019-06.csv.gz     100%[==============================================================>] 121.77M   227MB/s    in 0.5s    
 
-2024-02-09 09:20:09 (13.9 MB/s) - ‘yellow_tripdata_2019-06.parquet’ saved [102903344/102903344]
+2024-02-09 12:35:25 (227 MB/s) - ‘yellow_tripdata_2019-06.csv.gz’ saved [127685708/127685708]
 
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2019-07.parquet
---2024-02-09 09:20:16--  https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2019-07.parquet
-Resolving d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)... 18.161.108.141, 18.161.108.77, 18.161.108.184, ...
-Connecting to d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)|18.161.108.141|:443... connected.
+garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-07.csv.gz 
+--2024-02-09 12:35:32--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-07.csv.gz
+Resolving github.com (github.com)... 20.205.243.166
+Connecting to github.com (github.com)|20.205.243.166|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/2a11064d-04da-40fa-8a4d-3fd93cfb07e1?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T123532Z&X-Amz-Expires=300&X-Amz-Signature=e488d6e50419a279bd7648fb315aa774e164123d8a355a343060e61ca78ee0ee&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2019-07.csv.gz&response-content-type=application%2Foctet-stream [following]
+--2024-02-09 12:35:32--  https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/2a11064d-04da-40fa-8a4d-3fd93cfb07e1?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T123532Z&X-Amz-Expires=300&X-Amz-Signature=e488d6e50419a279bd7648fb315aa774e164123d8a355a343060e61ca78ee0ee&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2019-07.csv.gz&response-content-type=application%2Foctet-stream
+Resolving objects.githubusercontent.com (objects.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
+Connecting to objects.githubusercontent.com (objects.githubusercontent.com)|185.199.108.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
-Length: 93877343 (90M) [application/x-www-form-urlencoded]
-Saving to: ‘yellow_tripdata_2019-07.parquet’
+Length: 115817922 (110M) [application/octet-stream]
+Saving to: ‘yellow_tripdata_2019-07.csv.gz’
 
-yellow_tripdata_2019-07.parquet    100%[==============================================================>]  89.53M  16.2MB/s    in 6.6s    
+yellow_tripdata_2019-07.csv.gz     100%[==============================================================>] 110.45M  16.7MB/s    in 7.7s    
 
-2024-02-09 09:20:24 (13.5 MB/s) - ‘yellow_tripdata_2019-07.parquet’ saved [93877343/93877343]
+2024-02-09 12:35:41 (14.3 MB/s) - ‘yellow_tripdata_2019-07.csv.gz’ saved [115817922/115817922]
 
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2019-08.parquet
---2024-02-09 09:20:49--  https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2019-08.parquet
-Resolving d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)... 18.161.108.77, 18.161.108.231, 18.161.108.141, ...
-Connecting to d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)|18.161.108.77|:443... connected.
+garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-08.csv.gz 
+--2024-02-09 12:35:48--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-08.csv.gz
+Resolving github.com (github.com)... 20.205.243.166
+Connecting to github.com (github.com)|20.205.243.166|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/cabf77d2-e711-4bf4-a64e-aea7824bdc4e?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T123549Z&X-Amz-Expires=300&X-Amz-Signature=a892dbae68d9bb031fb0438aa737e98e05e16e5d49fde0b4aba50343b9db59cb&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2019-08.csv.gz&response-content-type=application%2Foctet-stream [following]
+--2024-02-09 12:35:49--  https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/cabf77d2-e711-4bf4-a64e-aea7824bdc4e?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T123549Z&X-Amz-Expires=300&X-Amz-Signature=a892dbae68d9bb031fb0438aa737e98e05e16e5d49fde0b4aba50343b9db59cb&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2019-08.csv.gz&response-content-type=application%2Foctet-stream
+Resolving objects.githubusercontent.com (objects.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
+Connecting to objects.githubusercontent.com (objects.githubusercontent.com)|185.199.108.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
-Length: 89999675 (86M) [application/x-www-form-urlencoded]
-Saving to: ‘yellow_tripdata_2019-08.parquet’
+Length: 111465721 (106M) [application/octet-stream]
+Saving to: ‘yellow_tripdata_2019-08.csv.gz’
 
-yellow_tripdata_2019-08.parquet    100%[==============================================================>]  85.83M  12.9MB/s    in 7.2s    
+yellow_tripdata_2019-08.csv.gz     100%[==============================================================>] 106.30M  15.7MB/s    in 7.0s    
 
-2024-02-09 09:20:57 (11.9 MB/s) - ‘yellow_tripdata_2019-08.parquet’ saved [89999675/89999675]
+2024-02-09 12:35:56 (15.2 MB/s) - ‘yellow_tripdata_2019-08.csv.gz’ saved [111465721/111465721]
 
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2019-09.parquet
---2024-02-09 09:21:03--  https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2019-09.parquet
-Resolving d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)... 18.161.108.77, 18.161.108.231, 18.161.108.141, ...
-Connecting to d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)|18.161.108.77|:443... connected.
+garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-09.csv.gz 
+--2024-02-09 12:36:03--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-09.csv.gz
+Resolving github.com (github.com)... 20.205.243.166
+Connecting to github.com (github.com)|20.205.243.166|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/58ca11b3-be2e-4186-8495-b5b1f58d2955?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T123603Z&X-Amz-Expires=300&X-Amz-Signature=9a2848290e41d9b1828b2d655ae9683d66d2c48ba7f2510ed9564fd800eb63ff&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2019-09.csv.gz&response-content-type=application%2Foctet-stream [following]
+--2024-02-09 12:36:03--  https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/58ca11b3-be2e-4186-8495-b5b1f58d2955?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T123603Z&X-Amz-Expires=300&X-Amz-Signature=9a2848290e41d9b1828b2d655ae9683d66d2c48ba7f2510ed9564fd800eb63ff&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2019-09.csv.gz&response-content-type=application%2Foctet-stream
+Resolving objects.githubusercontent.com (objects.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
+Connecting to objects.githubusercontent.com (objects.githubusercontent.com)|185.199.108.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
-Length: 97110325 (93M) [application/x-www-form-urlencoded]
-Saving to: ‘yellow_tripdata_2019-09.parquet’
+Length: 120807645 (115M) [application/octet-stream]
+Saving to: ‘yellow_tripdata_2019-09.csv.gz’
 
-yellow_tripdata_2019-09.parquet    100%[==============================================================>]  92.61M  16.3MB/s    in 6.8s    
+yellow_tripdata_2019-09.csv.gz     100%[==============================================================>] 115.21M  17.5MB/s    in 6.6s    
 
-2024-02-09 09:21:11 (13.7 MB/s) - ‘yellow_tripdata_2019-09.parquet’ saved [97110325/97110325]
+2024-02-09 12:36:11 (17.4 MB/s) - ‘yellow_tripdata_2019-09.csv.gz’ saved [120807645/120807645]
 
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2019-10.parquet
---2024-02-09 09:21:20--  https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2019-10.parquet
-Resolving d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)... 18.161.108.77, 18.161.108.231, 18.161.108.141, ...
-Connecting to d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)|18.161.108.77|:443... connected.
+garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-10.csv.gz 
+--2024-02-09 12:36:24--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-10.csv.gz
+Resolving github.com (github.com)... 20.205.243.166
+Connecting to github.com (github.com)|20.205.243.166|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/7f6b0888-e4fc-4c28-9a76-a3c47e6216aa?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T123624Z&X-Amz-Expires=300&X-Amz-Signature=6b0eddc6c16b28b6f062b0523d3f7ba3324d641e3d232de95042d2e3b4c47b60&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2019-10.csv.gz&response-content-type=application%2Foctet-stream [following]
+--2024-02-09 12:36:24--  https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/7f6b0888-e4fc-4c28-9a76-a3c47e6216aa?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T123624Z&X-Amz-Expires=300&X-Amz-Signature=6b0eddc6c16b28b6f062b0523d3f7ba3324d641e3d232de95042d2e3b4c47b60&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2019-10.csv.gz&response-content-type=application%2Foctet-stream
+Resolving objects.githubusercontent.com (objects.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
+Connecting to objects.githubusercontent.com (objects.githubusercontent.com)|185.199.108.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
-Length: 106293373 (101M) [application/x-www-form-urlencoded]
-Saving to: ‘yellow_tripdata_2019-10.parquet’
+Length: 132413025 (126M) [application/octet-stream]
+Saving to: ‘yellow_tripdata_2019-10.csv.gz’
 
-yellow_tripdata_2019-10.parquet    100%[==============================================================>] 101.37M  16.5MB/s    in 7.2s    
+yellow_tripdata_2019-10.csv.gz     100%[==============================================================>] 126.28M   211MB/s    in 0.6s    
 
-2024-02-09 09:21:29 (14.0 MB/s) - ‘yellow_tripdata_2019-10.parquet’ saved [106293373/106293373]
+2024-02-09 12:36:26 (211 MB/s) - ‘yellow_tripdata_2019-10.csv.gz’ saved [132413025/132413025]
 
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2019-11.parquet
---2024-02-09 09:21:35--  https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2019-11.parquet
-Resolving d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)... 18.161.108.77, 18.161.108.231, 18.161.108.141, ...
-Connecting to d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)|18.161.108.77|:443... connected.
+garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-11.csv.gz 
+--2024-02-09 12:36:36--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-11.csv.gz
+Resolving github.com (github.com)... 20.205.243.166
+Connecting to github.com (github.com)|20.205.243.166|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/c476a0ee-966a-4f46-b838-7e4932deb657?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T123636Z&X-Amz-Expires=300&X-Amz-Signature=3663922683fb9a36471483818791e725c33af2748cc45443434f74971805196d&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2019-11.csv.gz&response-content-type=application%2Foctet-stream [following]
+--2024-02-09 12:36:36--  https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/c476a0ee-966a-4f46-b838-7e4932deb657?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T123636Z&X-Amz-Expires=300&X-Amz-Signature=3663922683fb9a36471483818791e725c33af2748cc45443434f74971805196d&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2019-11.csv.gz&response-content-type=application%2Foctet-stream
+Resolving objects.githubusercontent.com (objects.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
+Connecting to objects.githubusercontent.com (objects.githubusercontent.com)|185.199.108.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
-Length: 100872983 (96M) [application/x-www-form-urlencoded]
-Saving to: ‘yellow_tripdata_2019-11.parquet’
+Length: 125953067 (120M) [application/octet-stream]
+Saving to: ‘yellow_tripdata_2019-11.csv.gz’
 
-yellow_tripdata_2019-11.parquet    100%[==============================================================>]  96.20M  14.7MB/s    in 7.3s    
+yellow_tripdata_2019-11.csv.gz     100%[==============================================================>] 120.12M   238MB/s    in 0.5s    
 
-2024-02-09 09:21:43 (13.1 MB/s) - ‘yellow_tripdata_2019-11.parquet’ saved [100872983/100872983]
+2024-02-09 12:36:38 (238 MB/s) - ‘yellow_tripdata_2019-11.csv.gz’ saved [125953067/125953067]
 
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2019-12.parquet
---2024-02-09 09:21:50--  https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2019-12.parquet
-Resolving d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)... 18.161.108.231, 18.161.108.141, 18.161.108.77, ...
-Connecting to d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)|18.161.108.231|:443... connected.
+garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-12.csv.gz 
+--2024-02-09 12:36:52--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-12.csv.gz
+Resolving github.com (github.com)... 20.205.243.166
+Connecting to github.com (github.com)|20.205.243.166|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/a5b0d394-f159-46fe-8dac-b79fa44da6b0?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T123652Z&X-Amz-Expires=300&X-Amz-Signature=bd93f85a99b3b0aa5ea78860b7f35bae6472610886eea9910665d59835f775ea&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2019-12.csv.gz&response-content-type=application%2Foctet-stream [following]
+--2024-02-09 12:36:52--  https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/a5b0d394-f159-46fe-8dac-b79fa44da6b0?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T123652Z&X-Amz-Expires=300&X-Amz-Signature=bd93f85a99b3b0aa5ea78860b7f35bae6472610886eea9910665d59835f775ea&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2019-12.csv.gz&response-content-type=application%2Foctet-stream
+Resolving objects.githubusercontent.com (objects.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
+Connecting to objects.githubusercontent.com (objects.githubusercontent.com)|185.199.108.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
-Length: 101044777 (96M) [application/x-www-form-urlencoded]
-Saving to: ‘yellow_tripdata_2019-12.parquet’
+Length: 126446810 (121M) [application/octet-stream]
+Saving to: ‘yellow_tripdata_2019-12.csv.gz’
 
-yellow_tripdata_2019-12.parquet    100%[==============================================================>]  96.36M  16.2MB/s    in 7.0s    
+yellow_tripdata_2019-12.csv.gz     100%[==============================================================>] 120.59M   277MB/s    in 0.4s    
 
-2024-02-09 09:21:58 (13.8 MB/s) - ‘yellow_tripdata_2019-12.parquet’ saved [101044777/101044777]
+2024-02-09 12:36:54 (277 MB/s) - ‘yellow_tripdata_2019-12.csv.gz’ saved [126446810/126446810]
 ```
+
 ```
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2020-01.parquet
---2024-02-09 09:27:04--  https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2020-01.parquet
-Resolving d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)... 18.161.108.141, 18.161.108.231, 18.161.108.77, ...
-Connecting to d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)|18.161.108.141|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 93562858 (89M) [application/x-www-form-urlencoded]
-Saving to: ‘yellow_tripdata_2020-01.parquet’
-
-yellow_tripdata_2020-01.parquet    100%[==============================================================>]  89.23M  16.2MB/s    in 6.6s    
-
-2024-02-09 09:27:11 (13.6 MB/s) - ‘yellow_tripdata_2020-01.parquet’ saved [93562858/93562858]
-
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2020-02.parquet
---2024-02-09 09:27:18--  https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2020-02.parquet
-Resolving d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)... 18.161.108.141, 18.161.108.231, 18.161.108.77, ...
-Connecting to d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)|18.161.108.141|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 92134881 (88M) [application/x-www-form-urlencoded]
-Saving to: ‘yellow_tripdata_2020-02.parquet’
-
-yellow_tripdata_2020-02.parquet    100%[==============================================================>]  87.87M  16.5MB/s    in 6.4s    
-
-2024-02-09 09:27:25 (13.8 MB/s) - ‘yellow_tripdata_2020-02.parquet’ saved [92134881/92134881]
-
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2020-03.parquet
---2024-02-09 09:27:30--  https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2020-03.parquet
-Resolving d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)... 18.161.108.141, 18.161.108.231, 18.161.108.77, ...
-Connecting to d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)|18.161.108.141|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 44442590 (42M) [application/x-www-form-urlencoded]
-Saving to: ‘yellow_tripdata_2020-03.parquet’
-
-yellow_tripdata_2020-03.parquet    100%[==============================================================>]  42.38M  13.3MB/s    in 3.7s    
-
-2024-02-09 09:27:35 (11.6 MB/s) - ‘yellow_tripdata_2020-03.parquet’ saved [44442590/44442590]
-
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2020-04.parquet
---2024-02-09 09:27:42--  https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2020-04.parquet
-Resolving d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)... 18.161.108.184, 18.161.108.77, 18.161.108.141, ...
-Connecting to d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)|18.161.108.184|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 4442620 (4.2M) [binary/octet-stream]
-Saving to: ‘yellow_tripdata_2020-04.parquet’
-
-yellow_tripdata_2020-04.parquet    100%[==============================================================>]   4.24M  3.21MB/s    in 1.3s    
-
-2024-02-09 09:27:45 (3.21 MB/s) - ‘yellow_tripdata_2020-04.parquet’ saved [4442620/4442620]
-
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2020-05.parquet
---2024-02-09 09:27:52--  https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2020-05.parquet
-Resolving d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)... 18.161.108.184, 18.161.108.77, 18.161.108.141, ...
-Connecting to d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)|18.161.108.184|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 6229864 (5.9M) [binary/octet-stream]
-Saving to: ‘yellow_tripdata_2020-05.parquet’
-
-yellow_tripdata_2020-05.parquet    100%[==============================================================>]   5.94M  4.12MB/s    in 1.4s    
-
-2024-02-09 09:27:54 (4.12 MB/s) - ‘yellow_tripdata_2020-05.parquet’ saved [6229864/6229864]
-
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2020-06.parquet
---2024-02-09 09:30:07--  https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2020-06.parquet
-Resolving d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)... 108.157.184.33, 108.157.184.223, 108.157.184.53, ...
-Connecting to d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)|108.157.184.33|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 9505358 (9.1M) [binary/octet-stream]
-Saving to: ‘yellow_tripdata_2020-06.parquet’
-
-yellow_tripdata_2020-06.parquet    100%[==============================================================>]   9.06M  6.16MB/s    in 1.5s    
-
-2024-02-09 09:30:09 (6.16 MB/s) - ‘yellow_tripdata_2020-06.parquet’ saved [9505358/9505358]
-
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2020-07.parquet
---2024-02-09 09:30:15--  https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2020-07.parquet
-Resolving d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)... 108.157.184.33, 108.157.184.223, 108.157.184.53, ...
-Connecting to d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)|108.157.184.33|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 13387778 (13M) [binary/octet-stream]
-Saving to: ‘yellow_tripdata_2020-07.parquet’
-
-yellow_tripdata_2020-07.parquet    100%[==============================================================>]  12.77M  7.33MB/s    in 1.7s    
-
-2024-02-09 09:30:18 (7.33 MB/s) - ‘yellow_tripdata_2020-07.parquet’ saved [13387778/13387778]
-
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2020-08.parquet
---2024-02-09 09:30:24--  https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2020-08.parquet
-Resolving d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)... 108.157.184.33, 108.157.184.223, 108.157.184.53, ...
-Connecting to d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)|108.157.184.33|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 16601463 (16M) [binary/octet-stream]
-Saving to: ‘yellow_tripdata_2020-08.parquet’
-
-yellow_tripdata_2020-08.parquet    100%[==============================================================>]  15.83M  8.61MB/s    in 1.8s    
-
-2024-02-09 09:30:27 (8.61 MB/s) - ‘yellow_tripdata_2020-08.parquet’ saved [16601463/16601463]
-
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2020-09.parquet
---2024-02-09 09:30:40--  https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2020-09.parquet
-Resolving d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)... 18.161.108.184, 18.161.108.77, 18.161.108.141, ...
-Connecting to d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)|18.161.108.184|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 21381938 (20M) [application/x-www-form-urlencoded]
-Saving to: ‘yellow_tripdata_2020-09.parquet’
-
-yellow_tripdata_2020-09.parquet    100%[==============================================================>]  20.39M  8.77MB/s    in 2.3s    
-
-2024-02-09 09:30:43 (8.77 MB/s) - ‘yellow_tripdata_2020-09.parquet’ saved [21381938/21381938]
-
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2020-10.parquet
---2024-02-09 09:30:50--  https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2020-10.parquet
-Resolving d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)... 18.161.108.184, 18.161.108.77, 18.161.108.141, ...
-Connecting to d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)|18.161.108.184|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 26306876 (25M) [application/x-www-form-urlencoded]
-Saving to: ‘yellow_tripdata_2020-10.parquet’
-
-yellow_tripdata_2020-10.parquet    100%[==============================================================>]  25.09M  9.69MB/s    in 2.6s    
-
-2024-02-09 09:30:54 (9.69 MB/s) - ‘yellow_tripdata_2020-10.parquet’ saved [26306876/26306876]
-
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2020-11.parquet
---2024-02-09 09:30:59--  https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2020-11.parquet
-Resolving d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)... 18.161.108.184, 18.161.108.77, 18.161.108.141, ...
-Connecting to d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)|18.161.108.184|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 23583368 (22M) [application/x-www-form-urlencoded]
-Saving to: ‘yellow_tripdata_2020-11.parquet’
-
-yellow_tripdata_2020-11.parquet    100%[==============================================================>]  22.49M  9.41MB/s    in 2.4s    
-
-2024-02-09 09:31:03 (9.41 MB/s) - ‘yellow_tripdata_2020-11.parquet’ saved [23583368/23583368]
-
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2020-12.parquet
---2024-02-09 09:31:08--  https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2020-12.parquet
-Resolving d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)... 18.161.108.184, 18.161.108.77, 18.161.108.141, ...
-Connecting to d37ci6vzurychx.cloudfront.net (d37ci6vzurychx.cloudfront.net)|18.161.108.184|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 23020036 (22M) [application/x-www-form-urlencoded]
-Saving to: ‘yellow_tripdata_2020-12.parquet’
-
-yellow_tripdata_2020-12.parquet    100%[==============================================================>]  21.95M  9.16MB/s    in 2.4s    
-
-2024-02-09 09:31:12 (9.16 MB/s) - ‘yellow_tripdata_2020-12.parquet’ saved [23020036/23020036]
+garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ gsutil -m cp yellow* gs://de-zoomcamp-garjita-bucket/trip_data
+Copying file://yellow_tripdata_2019-01.csv.gz [Content-Type=text/csv]...
+Copying file://yellow_tripdata_2019-03.csv.gz [Content-Type=text/csv]...        
+Copying file://yellow_tripdata_2019-06.csv.gz [Content-Type=text/csv]...        
+Copying file://yellow_tripdata_2019-05.csv.gz [Content-Type=text/csv]...        
+Copying file://yellow_tripdata_2019-02.csv.gz [Content-Type=text/csv]...        
+Copying file://yellow_tripdata_2019-04.csv.gz [Content-Type=text/csv]...        
+Copying file://yellow_tripdata_2019-11.csv.gz [Content-Type=text/csv]...        
+Copying file://yellow_tripdata_2019-07.csv.gz [Content-Type=text/csv]...        
+Copying file://yellow_tripdata_2019-08.csv.gz [Content-Type=text/csv]...        
+Copying file://yellow_tripdata_2019-09.csv.gz [Content-Type=text/csv]...        
+Copying file://yellow_tripdata_2019-10.csv.gz [Content-Type=text/csv]...        
+Copying file://yellow_tripdata_2019-12.csv.gz [Content-Type=text/csv]...        
+/ [12/12 files][  1.4 GiB/  1.4 GiB] 100% Done 125.5 MiB/s ETA 00:00:00         
+Operation completed over 12 objects/1.4 GiB.
 ```
+
+
 ```
-garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ ls -al
-total 1597312
-drwxr-xr-x 10 garjita_ds garjita_ds      4096 Feb  9 09:31 .
-drwxr-xr-x  4 root       root            4096 Jan 22 23:49 ..
--rw-------  1 garjita_ds garjita_ds     11337 Feb  9 09:31 .bash_history
--rw-r--r--  1 garjita_ds garjita_ds       220 Mar 27  2022 .bash_logout
--rw-r--r--  1 garjita_ds garjita_ds      3564 Jan  3 08:14 .bashrc
--rw-------  1 garjita_ds garjita_ds     21485 Feb  2 02:59 .boto
-drwxr-xr-x  3 garjita_ds garjita_ds      4096 Jan 28 02:22 .cache
-drwx------  4 garjita_ds garjita_ds      4096 Jan 28 02:21 .codeoss
-drwxr-xr-x  3 garjita_ds garjita_ds      4096 Jan  3 08:05 .config
-drwxr-xr-x  2 garjita_ds garjita_ds      4096 Feb  2 05:15 .docker
--rw-r--r--  1 garjita_ds garjita_ds   1254291 Jun 30  2022 green_tripdata_2022-01.parquet
--rw-r--r--  1 garjita_ds garjita_ds   1428262 Jun 30  2022 green_tripdata_2022-02.parquet
--rw-r--r--  1 garjita_ds garjita_ds   1615562 Jun 30  2022 green_tripdata_2022-03.parquet
--rw-r--r--  1 garjita_ds garjita_ds   1570363 Aug 30  2022 green_tripdata_2022-04.parquet
--rw-r--r--  1 garjita_ds garjita_ds   1589636 Aug 30  2022 green_tripdata_2022-05.parquet
--rw-r--r--  1 garjita_ds garjita_ds   1529658 Aug 30  2022 green_tripdata_2022-06.parquet
--rw-r--r--  1 garjita_ds garjita_ds   1312353 Nov 14  2022 green_tripdata_2022-07.parquet
--rw-r--r--  1 garjita_ds garjita_ds   1346660 Nov 14  2022 green_tripdata_2022-08.parquet
--rw-r--r--  1 garjita_ds garjita_ds   1445166 Nov 30  2022 green_tripdata_2022-09.parquet
--rw-r--r--  1 garjita_ds garjita_ds   1444642 Dec 19  2022 green_tripdata_2022-10.parquet
--rw-r--r--  1 garjita_ds garjita_ds   1270324 Jan 25  2023 green_tripdata_2022-11.parquet
--rw-r--r--  1 garjita_ds garjita_ds   1519259 Mar 20  2023 green_tripdata_2022-12.parquet
-drwxr-xr-x 11 garjita_ds garjita_ds      4096 Feb  2 02:26 mage-ai-terraform-templates
-drwxr-xr-x  2 garjita_ds garjita_ds      4096 Jan 28 02:44 mybucket
-drwxr-xr-x  3 garjita_ds garjita_ds      4096 Jan 22 23:49 .npm
--rw-r--r--  1 garjita_ds garjita_ds       807 Mar 27  2022 .profile
--rw-r--r--  1 garjita_ds garjita_ds       913 Feb  9 09:05 README-cloudshell.txt
-drwxr-xr-x  2 garjita_ds garjita_ds      4096 Feb  2 02:38 .terraform.d
--rw-------  1 garjita_ds garjita_ds     19815 Feb  2 10:18 .viminfo
--rw-r--r--  1 garjita_ds garjita_ds 110439634 Jun 30  2022 yellow_tripdata_2019-01.parquet
--rw-r--r--  1 garjita_ds garjita_ds 103356025 Jun 30  2022 yellow_tripdata_2019-02.parquet
--rw-r--r--  1 garjita_ds garjita_ds 116017372 Jun 30  2022 yellow_tripdata_2019-03.parquet
--rw-r--r--  1 garjita_ds garjita_ds 110139137 Jun 30  2022 yellow_tripdata_2019-04.parquet
--rw-r--r--  1 garjita_ds garjita_ds 111478943 Jun 30  2022 yellow_tripdata_2019-05.parquet
--rw-r--r--  1 garjita_ds garjita_ds 102903344 Jun 30  2022 yellow_tripdata_2019-06.parquet
--rw-r--r--  1 garjita_ds garjita_ds  93877343 Jun 30  2022 yellow_tripdata_2019-07.parquet
--rw-r--r--  1 garjita_ds garjita_ds  89999675 Jun 30  2022 yellow_tripdata_2019-08.parquet
--rw-r--r--  1 garjita_ds garjita_ds  97110325 Jun 30  2022 yellow_tripdata_2019-09.parquet
--rw-r--r--  1 garjita_ds garjita_ds 106293373 Jun 30  2022 yellow_tripdata_2019-10.parquet
--rw-r--r--  1 garjita_ds garjita_ds 100872983 Jun 30  2022 yellow_tripdata_2019-11.parquet
--rw-r--r--  1 garjita_ds garjita_ds 101044777 Jun 30  2022 yellow_tripdata_2019-12.parquet
--rw-r--r--  1 garjita_ds garjita_ds  93562858 Jun 30  2022 yellow_tripdata_2020-01.parquet
--rw-r--r--  1 garjita_ds garjita_ds  92134881 Jun 30  2022 yellow_tripdata_2020-02.parquet
--rw-r--r--  1 garjita_ds garjita_ds  44442590 Jun 30  2022 yellow_tripdata_2020-03.parquet
--rw-r--r--  1 garjita_ds garjita_ds   4442620 Jun 30  2022 yellow_tripdata_2020-04.parquet
--rw-r--r--  1 garjita_ds garjita_ds   6229864 Jun 30  2022 yellow_tripdata_2020-05.parquet
--rw-r--r--  1 garjita_ds garjita_ds   9505358 Jun 30  2022 yellow_tripdata_2020-06.parquet
--rw-r--r--  1 garjita_ds garjita_ds  13387778 Jun 30  2022 yellow_tripdata_2020-07.parquet
--rw-r--r--  1 garjita_ds garjita_ds  16601463 Jun 30  2022 yellow_tripdata_2020-08.parquet
--rw-r--r--  1 garjita_ds garjita_ds  21381938 Jun 30  2022 yellow_tripdata_2020-09.parquet
--rw-r--r--  1 garjita_ds garjita_ds  26306876 Jun 30  2022 yellow_tripdata_2020-10.parquet
--rw-r--r--  1 garjita_ds garjita_ds  23583368 Jun 30  2022 yellow_tripdata_2020-11.parquet
--rw-r--r--  1 garjita_ds garjita_ds  23020036 Jun 30  2022 yellow_tripdata_2020-12.parquet
+garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-01.csv.gz 
+--2024-02-09 12:49:30--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-01.csv.gz
+Resolving github.com (github.com)... 20.205.243.166
+Connecting to github.com (github.com)|20.205.243.166|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/1bc3de9c-af03-46e3-baa6-c4475782682d?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T124930Z&X-Amz-Expires=300&X-Amz-Signature=3bd51ca6d490288e7289829ac56adb5389bacbb03399422a8a785d6277f20b7c&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2020-01.csv.gz&response-content-type=application%2Foctet-stream [following]
+--2024-02-09 12:49:30--  https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/1bc3de9c-af03-46e3-baa6-c4475782682d?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T124930Z&X-Amz-Expires=300&X-Amz-Signature=3bd51ca6d490288e7289829ac56adb5389bacbb03399422a8a785d6277f20b7c&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2020-01.csv.gz&response-content-type=application%2Foctet-stream
+Resolving objects.githubusercontent.com (objects.githubusercontent.com)... 185.199.109.133, 185.199.110.133, 185.199.111.133, ...
+Connecting to objects.githubusercontent.com (objects.githubusercontent.com)|185.199.109.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 116338814 (111M) [application/octet-stream]
+Saving to: ‘yellow_tripdata_2020-01.csv.gz’
+
+yellow_tripdata_2020-01.csv.gz     100%[==============================================================>] 110.95M   273MB/s    in 0.4s    
+
+2024-02-09 12:49:32 (273 MB/s) - ‘yellow_tripdata_2020-01.csv.gz’ saved [116338814/116338814]
+
+garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-02.csv.gz 
+--2024-02-09 12:49:38--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-02.csv.gz
+Resolving github.com (github.com)... 20.205.243.166
+Connecting to github.com (github.com)|20.205.243.166|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/fdaae067-f8d4-4f9b-9e45-2e760539d309?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T124939Z&X-Amz-Expires=300&X-Amz-Signature=b6db3347db0fe1bc2c91d63a435c107bbc2a8675d85e8191250aa82a1371f1d2&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2020-02.csv.gz&response-content-type=application%2Foctet-stream [following]
+--2024-02-09 12:49:39--  https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/fdaae067-f8d4-4f9b-9e45-2e760539d309?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T124939Z&X-Amz-Expires=300&X-Amz-Signature=b6db3347db0fe1bc2c91d63a435c107bbc2a8675d85e8191250aa82a1371f1d2&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2020-02.csv.gz&response-content-type=application%2Foctet-stream
+Resolving objects.githubusercontent.com (objects.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
+Connecting to objects.githubusercontent.com (objects.githubusercontent.com)|185.199.108.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 114701110 (109M) [application/octet-stream]
+Saving to: ‘yellow_tripdata_2020-02.csv.gz’
+
+yellow_tripdata_2020-02.csv.gz     100%[==============================================================>] 109.39M   287MB/s    in 0.4s    
+
+2024-02-09 12:49:40 (287 MB/s) - ‘yellow_tripdata_2020-02.csv.gz’ saved [114701110/114701110]
+
+garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-03.csv.gz 
+--2024-02-09 12:49:44--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-03.csv.gz
+Resolving github.com (github.com)... 20.205.243.166
+Connecting to github.com (github.com)|20.205.243.166|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/46d9461c-89fe-4084-a06f-92256b7e035c?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T124945Z&X-Amz-Expires=300&X-Amz-Signature=c7ad0bea989f0f348384daaa75855b368df578ade063711c5011b07e3e1cc7b5&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2020-03.csv.gz&response-content-type=application%2Foctet-stream [following]
+--2024-02-09 12:49:45--  https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/46d9461c-89fe-4084-a06f-92256b7e035c?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T124945Z&X-Amz-Expires=300&X-Amz-Signature=c7ad0bea989f0f348384daaa75855b368df578ade063711c5011b07e3e1cc7b5&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2020-03.csv.gz&response-content-type=application%2Foctet-stream
+Resolving objects.githubusercontent.com (objects.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
+Connecting to objects.githubusercontent.com (objects.githubusercontent.com)|185.199.108.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 55004095 (52M) [application/octet-stream]
+Saving to: ‘yellow_tripdata_2020-03.csv.gz’
+
+yellow_tripdata_2020-03.csv.gz     100%[==============================================================>]  52.46M   275MB/s    in 0.2s    
+
+2024-02-09 12:49:46 (275 MB/s) - ‘yellow_tripdata_2020-03.csv.gz’ saved [55004095/55004095]
+
+garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-04.csv.gz 
+--2024-02-09 12:49:53--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-04.csv.gz
+Resolving github.com (github.com)... 20.205.243.166
+Connecting to github.com (github.com)|20.205.243.166|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/3a5b385e-7c0e-40bc-a73e-ae68a584a73a?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T124954Z&X-Amz-Expires=300&X-Amz-Signature=4764744e17f05f6c4b6354633f0afa44ecd1188626e747f029a18fe7e1bda069&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2020-04.csv.gz&response-content-type=application%2Foctet-stream [following]
+--2024-02-09 12:49:54--  https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/3a5b385e-7c0e-40bc-a73e-ae68a584a73a?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T124954Z&X-Amz-Expires=300&X-Amz-Signature=4764744e17f05f6c4b6354633f0afa44ecd1188626e747f029a18fe7e1bda069&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2020-04.csv.gz&response-content-type=application%2Foctet-stream
+Resolving objects.githubusercontent.com (objects.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
+Connecting to objects.githubusercontent.com (objects.githubusercontent.com)|185.199.108.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 4429528 (4.2M) [application/octet-stream]
+Saving to: ‘yellow_tripdata_2020-04.csv.gz’
+
+yellow_tripdata_2020-04.csv.gz     100%[==============================================================>]   4.22M  --.-KB/s    in 0.02s   
+
+2024-02-09 12:49:55 (210 MB/s) - ‘yellow_tripdata_2020-04.csv.gz’ saved [4429528/4429528]
+
+garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-05.csv.gz 
+--2024-02-09 12:50:02--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-05.csv.gz
+Resolving github.com (github.com)... 20.205.243.166
+Connecting to github.com (github.com)|20.205.243.166|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/7c737dbd-a617-477c-9b86-a939e917baa8?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T125003Z&X-Amz-Expires=300&X-Amz-Signature=4f34fca7a7dc37c9a30ac8f69628be828183ddd4c50c80011298415448e47527&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2020-05.csv.gz&response-content-type=application%2Foctet-stream [following]
+--2024-02-09 12:50:03--  https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/7c737dbd-a617-477c-9b86-a939e917baa8?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T125003Z&X-Amz-Expires=300&X-Amz-Signature=4f34fca7a7dc37c9a30ac8f69628be828183ddd4c50c80011298415448e47527&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2020-05.csv.gz&response-content-type=application%2Foctet-stream
+Resolving objects.githubusercontent.com (objects.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
+Connecting to objects.githubusercontent.com (objects.githubusercontent.com)|185.199.108.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 6528512 (6.2M) [application/octet-stream]
+Saving to: ‘yellow_tripdata_2020-05.csv.gz’
+
+yellow_tripdata_2020-05.csv.gz     100%[==============================================================>]   6.23M  --.-KB/s    in 0.03s   
+
+2024-02-09 12:50:04 (225 MB/s) - ‘yellow_tripdata_2020-05.csv.gz’ saved [6528512/6528512]
+
+garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-06.csv.gz 
+--2024-02-09 12:50:09--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-06.csv.gz
+Resolving github.com (github.com)... 20.205.243.166
+Connecting to github.com (github.com)|20.205.243.166|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/426b9080-186a-40fe-873a-d8019bf00e9a?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T125010Z&X-Amz-Expires=300&X-Amz-Signature=3a66bfe4c3bfafe072c5c56ad2be5cff240e0f368d7ef6828105f26a5e483cc9&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2020-06.csv.gz&response-content-type=application%2Foctet-stream [following]
+--2024-02-09 12:50:10--  https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/426b9080-186a-40fe-873a-d8019bf00e9a?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T125010Z&X-Amz-Expires=300&X-Amz-Signature=3a66bfe4c3bfafe072c5c56ad2be5cff240e0f368d7ef6828105f26a5e483cc9&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2020-06.csv.gz&response-content-type=application%2Foctet-stream
+Resolving objects.githubusercontent.com (objects.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
+Connecting to objects.githubusercontent.com (objects.githubusercontent.com)|185.199.108.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 10206684 (9.7M) [application/octet-stream]
+Saving to: ‘yellow_tripdata_2020-06.csv.gz’
+
+yellow_tripdata_2020-06.csv.gz     100%[==============================================================>]   9.73M  --.-KB/s    in 0.04s   
+
+2024-02-09 12:50:11 (222 MB/s) - ‘yellow_tripdata_2020-06.csv.gz’ saved [10206684/10206684]
+
+garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-07.csv.gz 
+--2024-02-09 12:50:18--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-07.csv.gz
+Resolving github.com (github.com)... 20.205.243.166
+Connecting to github.com (github.com)|20.205.243.166|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/1d635856-7182-4a46-a5a0-19b4e158fe1d?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T125018Z&X-Amz-Expires=300&X-Amz-Signature=a4f1f1324b96191f4bcfb295864e858693276d4b21e5084236158cd274fd8e18&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2020-07.csv.gz&response-content-type=application%2Foctet-stream [following]
+--2024-02-09 12:50:19--  https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/1d635856-7182-4a46-a5a0-19b4e158fe1d?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T125018Z&X-Amz-Expires=300&X-Amz-Signature=a4f1f1324b96191f4bcfb295864e858693276d4b21e5084236158cd274fd8e18&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2020-07.csv.gz&response-content-type=application%2Foctet-stream
+Resolving objects.githubusercontent.com (objects.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
+Connecting to objects.githubusercontent.com (objects.githubusercontent.com)|185.199.108.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 14720186 (14M) [application/octet-stream]
+Saving to: ‘yellow_tripdata_2020-07.csv.gz’
+
+yellow_tripdata_2020-07.csv.gz     100%[==============================================================>]  14.04M  --.-KB/s    in 0.06s   
+
+2024-02-09 12:50:19 (253 MB/s) - ‘yellow_tripdata_2020-07.csv.gz’ saved [14720186/14720186]
+
+garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-08.csv.gz 
+--2024-02-09 12:50:25--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-08.csv.gz
+Resolving github.com (github.com)... 20.205.243.166
+Connecting to github.com (github.com)|20.205.243.166|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/6e36a445-c307-4a05-881b-4ba8b1083fa4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T125025Z&X-Amz-Expires=300&X-Amz-Signature=cccff43b88b6f3c9999d89f02823fc3f9f1a1b84139f9dd37c9dbf044ac5cffd&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2020-08.csv.gz&response-content-type=application%2Foctet-stream [following]
+--2024-02-09 12:50:26--  https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/6e36a445-c307-4a05-881b-4ba8b1083fa4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T125025Z&X-Amz-Expires=300&X-Amz-Signature=cccff43b88b6f3c9999d89f02823fc3f9f1a1b84139f9dd37c9dbf044ac5cffd&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2020-08.csv.gz&response-content-type=application%2Foctet-stream
+Resolving objects.githubusercontent.com (objects.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
+Connecting to objects.githubusercontent.com (objects.githubusercontent.com)|185.199.108.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 18483087 (18M) [application/octet-stream]
+Saving to: ‘yellow_tripdata_2020-08.csv.gz’
+
+yellow_tripdata_2020-08.csv.gz     100%[==============================================================>]  17.63M  --.-KB/s    in 0.07s   
+
+2024-02-09 12:50:26 (245 MB/s) - ‘yellow_tripdata_2020-08.csv.gz’ saved [18483087/18483087]
+
+garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-09.csv.gz 
+--2024-02-09 12:50:33--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-09.csv.gz
+Resolving github.com (github.com)... 20.205.243.166
+Connecting to github.com (github.com)|20.205.243.166|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/b44e136e-f10d-426f-aadd-ff711f0bc7d4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T125034Z&X-Amz-Expires=300&X-Amz-Signature=e8b372f08335afc45eeb38d526551dd7358c623f9b0ed83ee689c515973f5f78&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2020-09.csv.gz&response-content-type=application%2Foctet-stream [following]
+--2024-02-09 12:50:34--  https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/b44e136e-f10d-426f-aadd-ff711f0bc7d4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T125034Z&X-Amz-Expires=300&X-Amz-Signature=e8b372f08335afc45eeb38d526551dd7358c623f9b0ed83ee689c515973f5f78&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2020-09.csv.gz&response-content-type=application%2Foctet-stream
+Resolving objects.githubusercontent.com (objects.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
+Connecting to objects.githubusercontent.com (objects.githubusercontent.com)|185.199.108.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 24510334 (23M) [application/octet-stream]
+Saving to: ‘yellow_tripdata_2020-09.csv.gz’
+
+yellow_tripdata_2020-09.csv.gz     100%[==============================================================>]  23.37M  --.-KB/s    in 0.09s   
+
+2024-02-09 12:50:34 (258 MB/s) - ‘yellow_tripdata_2020-09.csv.gz’ saved [24510334/24510334]
+
+garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-10.csv.gz 
+--2024-02-09 12:50:40--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-10.csv.gz
+Resolving github.com (github.com)... 20.205.243.166
+Connecting to github.com (github.com)|20.205.243.166|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/1ac8bf5c-f25b-4c3d-b9c2-fac759404378?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T125041Z&X-Amz-Expires=300&X-Amz-Signature=1e233290aba26045ce8f4571973ef0da1ed7281b277ebc378e525c0dc7cb0d62&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2020-10.csv.gz&response-content-type=application%2Foctet-stream [following]
+--2024-02-09 12:50:41--  https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/1ac8bf5c-f25b-4c3d-b9c2-fac759404378?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T125041Z&X-Amz-Expires=300&X-Amz-Signature=1e233290aba26045ce8f4571973ef0da1ed7281b277ebc378e525c0dc7cb0d62&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2020-10.csv.gz&response-content-type=application%2Foctet-stream
+Resolving objects.githubusercontent.com (objects.githubusercontent.com)... 185.199.109.133, 185.199.110.133, 185.199.111.133, ...
+Connecting to objects.githubusercontent.com (objects.githubusercontent.com)|185.199.109.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 30650867 (29M) [application/octet-stream]
+Saving to: ‘yellow_tripdata_2020-10.csv.gz’
+
+yellow_tripdata_2020-10.csv.gz     100%[==============================================================>]  29.23M  --.-KB/s    in 0.1s    
+
+2024-02-09 12:50:41 (239 MB/s) - ‘yellow_tripdata_2020-10.csv.gz’ saved [30650867/30650867]
+
+garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-11.csv.gz 
+--2024-02-09 12:50:50--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-11.csv.gz
+Resolving github.com (github.com)... 20.205.243.166
+Connecting to github.com (github.com)|20.205.243.166|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/fc11ebdf-8100-4fab-881b-43d073e27554?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T125050Z&X-Amz-Expires=300&X-Amz-Signature=2fdb8876c2b55f2ccdf130ffa5aeea79cec78681a8565b3cc588a1201c4a8f6a&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2020-11.csv.gz&response-content-type=application%2Foctet-stream [following]
+--2024-02-09 12:50:50--  https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/fc11ebdf-8100-4fab-881b-43d073e27554?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T125050Z&X-Amz-Expires=300&X-Amz-Signature=2fdb8876c2b55f2ccdf130ffa5aeea79cec78681a8565b3cc588a1201c4a8f6a&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2020-11.csv.gz&response-content-type=application%2Foctet-stream
+Resolving objects.githubusercontent.com (objects.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
+Connecting to objects.githubusercontent.com (objects.githubusercontent.com)|185.199.108.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 27531023 (26M) [application/octet-stream]
+Saving to: ‘yellow_tripdata_2020-11.csv.gz’
+
+yellow_tripdata_2020-11.csv.gz     100%[==============================================================>]  26.25M  11.5MB/s    in 2.3s    
+
+2024-02-09 12:50:53 (11.5 MB/s) - ‘yellow_tripdata_2020-11.csv.gz’ saved [27531023/27531023]
+
+garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-12.csv.gz 
+--2024-02-09 12:53:37--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2020-12.csv.gz
+Resolving github.com (github.com)... 20.205.243.166
+Connecting to github.com (github.com)|20.205.243.166|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/11e337cc-1826-45df-a181-34c7366e8421?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T125337Z&X-Amz-Expires=300&X-Amz-Signature=f19dd58b84cf7d959f0936c1fd5cd1d55d9cb26f6732c50748c07e2b2117728c&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2020-12.csv.gz&response-content-type=application%2Foctet-stream [following]
+--2024-02-09 12:53:38--  https://objects.githubusercontent.com/github-production-release-asset-2e65be/513814948/11e337cc-1826-45df-a181-34c7366e8421?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240209%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240209T125337Z&X-Amz-Expires=300&X-Amz-Signature=f19dd58b84cf7d959f0936c1fd5cd1d55d9cb26f6732c50748c07e2b2117728c&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=513814948&response-content-disposition=attachment%3B%20filename%3Dyellow_tripdata_2020-12.csv.gz&response-content-type=application%2Foctet-stream
+Resolving objects.githubusercontent.com (objects.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
+Connecting to objects.githubusercontent.com (objects.githubusercontent.com)|185.199.108.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 26524738 (25M) [application/octet-stream]
+Saving to: ‘yellow_tripdata_2020-12.csv.gz’
+
+yellow_tripdata_2020-12.csv.gz     100%[==============================================================>]  25.30M  16.3MB/s    in 1.6s    
+
+2024-02-09 12:53:40 (16.3 MB/s) - ‘yellow_tripdata_2020-12.csv.gz’ saved [26524738/26524738]
+
 ```
 
 **Copy files into a bucket**
 ```
-gsutil cp yellow*.parquet gs://de-zoomcamp-garjita-bucket/trip_data
-
-Copying file://yellow_tripdata_2019-01.parquet [Content-Type=application/octet-stream]...
-Copying file://yellow_tripdata_2019-02.parquet [Content-Type=application/octet-stream]...
-Copying file://yellow_tripdata_2019-03.parquet [Content-Type=application/octet-stream]...
-Copying file://yellow_tripdata_2019-04.parquet [Content-Type=application/octet-stream]...
-Copying file://yellow_tripdata_2019-05.parquet [Content-Type=application/octet-stream]...
-Copying file://yellow_tripdata_2019-06.parquet [Content-Type=application/octet-stream]...
-Copying file://yellow_tripdata_2019-07.parquet [Content-Type=application/octet-stream]...
-Copying file://yellow_tripdata_2019-08.parquet [Content-Type=application/octet-stream]...
-Copying file://yellow_tripdata_2019-09.parquet [Content-Type=application/octet-stream]...
-Copying file://yellow_tripdata_2019-10.parquet [Content-Type=application/octet-stream]...
-Copying file://yellow_tripdata_2019-11.parquet [Content-Type=application/octet-stream]...
-Copying file://yellow_tripdata_2019-12.parquet [Content-Type=application/octet-stream]...
-Copying file://yellow_tripdata_2020-01.parquet [Content-Type=application/octet-stream]...
-Copying file://yellow_tripdata_2020-02.parquet [Content-Type=application/octet-stream]...
-Copying file://yellow_tripdata_2020-03.parquet [Content-Type=application/octet-stream]...
-Copying file://yellow_tripdata_2020-04.parquet [Content-Type=application/octet-stream]...
-Copying file://yellow_tripdata_2020-05.parquet [Content-Type=application/octet-stream]...
-Copying file://yellow_tripdata_2020-06.parquet [Content-Type=application/octet-stream]...
-Copying file://yellow_tripdata_2020-07.parquet [Content-Type=application/octet-stream]...
-Copying file://yellow_tripdata_2020-08.parquet [Content-Type=application/octet-stream]...
-Copying file://yellow_tripdata_2020-09.parquet [Content-Type=application/octet-stream]...
-Copying file://yellow_tripdata_2020-10.parquet [Content-Type=application/octet-stream]...
-Copying file://yellow_tripdata_2020-11.parquet [Content-Type=application/octet-stream]...
-Copying file://yellow_tripdata_2020-12.parquet [Content-Type=application/octet-stream]...
-
-- [24 files][  1.5 GiB/  1.5 GiB]   39.3 MiB/s                                  
-==> NOTE: You are performing a sequence of gsutil operations that may
-run significantly faster if you instead use gsutil -m cp ... Please
-see the -m section under "gsutil help options" for further information
-about when gsutil -m can be advantageous.
-
-
-Operation completed over 24 objects/1.5 GiB.      
+garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ gsutil -m cp yellow*.csv.gz gs://de-zoomcamp-garjita-bucket/trip_data
+Copying file://yellow_tripdata_2019-01.csv.gz [Content-Type=text/csv]...
+Copying file://yellow_tripdata_2019-03.csv.gz [Content-Type=text/csv]...        
+Copying file://yellow_tripdata_2019-02.csv.gz [Content-Type=text/csv]...        
+Copying file://yellow_tripdata_2019-04.csv.gz [Content-Type=text/csv]...        
+Copying file://yellow_tripdata_2019-07.csv.gz [Content-Type=text/csv]...        
+Copying file://yellow_tripdata_2019-11.csv.gz [Content-Type=text/csv]...        
+Copying file://yellow_tripdata_2019-05.csv.gz [Content-Type=text/csv]...        
+Copying file://yellow_tripdata_2020-01.csv.gz [Content-Type=text/csv]...        
+Copying file://yellow_tripdata_2019-08.csv.gz [Content-Type=text/csv]...        
+Copying file://yellow_tripdata_2020-05.csv.gz [Content-Type=text/csv]...        
+Copying file://yellow_tripdata_2019-12.csv.gz [Content-Type=text/csv]...        
+Copying file://yellow_tripdata_2019-06.csv.gz [Content-Type=text/csv]...        
+Copying file://yellow_tripdata_2020-06.csv.gz [Content-Type=text/csv]...        
+Copying file://yellow_tripdata_2020-07.csv.gz [Content-Type=text/csv]...
+Copying file://yellow_tripdata_2019-09.csv.gz [Content-Type=text/csv]...        
+Copying file://yellow_tripdata_2020-02.csv.gz [Content-Type=text/csv]...        
+Copying file://yellow_tripdata_2019-10.csv.gz [Content-Type=text/csv]...
+Copying file://yellow_tripdata_2020-03.csv.gz [Content-Type=text/csv]...        
+Copying file://yellow_tripdata_2020-04.csv.gz [Content-Type=text/csv]...        
+Copying file://yellow_tripdata_2020-08.csv.gz [Content-Type=text/csv]...        
+Copying file://yellow_tripdata_2020-09.csv.gz [Content-Type=text/csv]...        
+Copying file://yellow_tripdata_2020-10.csv.gz [Content-Type=text/csv]...        
+Copying file://yellow_tripdata_2020-11.csv.gz [Content-Type=text/csv]...        
+Copying file://yellow_tripdata_2020-12.csv.gz [Content-Type=text/csv]...        
+- [24/24 files][  1.9 GiB/  1.9 GiB] 100% Done 169.3 MiB/s ETA 00:00:00         
+Operation completed over 24 objects/1.9 GiB.  
 ```
+
+```
+![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/971a2190-9115-49fc-bde6-ac8007538a90)
+![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/798decc0-6f92-4c1c-a3f8-bc698cc3e082)
+
 
 ## External tables
 BigQuery supports a few external data sources: you may query these sources directly from BigQuery even though the data itself isn't stored in BQ.
@@ -428,24 +506,29 @@ An external table is a table that acts like a standard BQ table. The table metad
 
 You may create an external table from a CSV or Parquet file stored in a Cloud Storage bucket:
 ```
-CREATE OR REPLACE EXTERNAL TABLE `dtc-de-course-2024-411803.nytaxi.external_yellow_tripdata`
+CREATE OR REPLACE EXTERNAL TABLE `nytaxi.external_yellow_tripdata`
 OPTIONS (
-  format = 'PARQUET',
-  uris = ['gs://de-zoomcamp-garjita-bucket/trip_data/yellow_tripdata_2019-*.parquet', 'gs://de-zoomcamp-garjita-bucket/trip_data/yellow_tripdata_2020-*.parquet']
+  format = 'CSV',
+  uris = ['gs://de-zoomcamp-garjita-bucket/trip_data/yellow_tripdata_2019-*.csv.gz', 'gs://de-zoomcamp-garjita-bucket/trip_data/yellow_tripdata_2020-*.csv.gz']
 );
 ```
-![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/88f8d62d-7b20-428b-9e1b-075f24601163)
+![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/ade14ff9-6307-4ae4-9ca3-c6d5ec1ca703)
 
-![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/49784e62-e692-4b39-878f-8cf93bdd7242)
+![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/35ce1370-3cd6-4aef-a2b2-862a11b50499)
 
 
 ### Regular Internal Table
 
 You may import an external table into BQ as a regular internal table by copying the contents of the external table into a new internal table. For example:
 ```
-CREATE OR REPLACE TABLE taxi-rides-ny.nytaxi.yellow_tripdata_non_partitoned AS
-SELECT * FROM taxi-rides-ny.nytaxi.external_yellow_tripdata;
+CREATE OR REPLACE TABLE nytaxi.yellow_tripdata_non_partitoned AS
+SELECT * FROM nytaxi.external_yellow_tripdata;
 ```
+![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/7b09d455-0455-42e6-953d-11a4c5758d7f)
+
+### Partitions
+
+
 
 
 
