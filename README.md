@@ -21,7 +21,16 @@ BigQuery (BQ) is a Data Warehouse solution offered by Google Cloud Platform.
 
 Some alternatives to BigQuery from other cloud providers would be AWS Redshift or Azure Synapse Analytics.
 
-### wget yellow taxi dataset
+### Hands-on learning
+
+#### wget datasets and load into a bucket
+
+[Source]: (https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page)
+
+Files : yellow_tripdata_2019-*.parquet & yellow_tripdata_2020-*.parquet
+
+**wget**
+
 ```
 Welcome to Cloud Shell! Type "help" to get started.
 Your Cloud Platform project in this session is set to dtc-de-course-2024-411803.
@@ -316,8 +325,63 @@ yellow_tripdata_2020-12.parquet    100%[========================================
 2024-02-09 09:31:12 (9.16 MB/s) - ‘yellow_tripdata_2020-12.parquet’ saved [23020036/23020036]
 ```
 
+garjita_ds@cloudshell:~ (dtc-de-course-2024-411803)$ ls -al
+total 1597312
+drwxr-xr-x 10 garjita_ds garjita_ds      4096 Feb  9 09:31 .
+drwxr-xr-x  4 root       root            4096 Jan 22 23:49 ..
+-rw-------  1 garjita_ds garjita_ds     11337 Feb  9 09:31 .bash_history
+-rw-r--r--  1 garjita_ds garjita_ds       220 Mar 27  2022 .bash_logout
+-rw-r--r--  1 garjita_ds garjita_ds      3564 Jan  3 08:14 .bashrc
+-rw-------  1 garjita_ds garjita_ds     21485 Feb  2 02:59 .boto
+drwxr-xr-x  3 garjita_ds garjita_ds      4096 Jan 28 02:22 .cache
+drwx------  4 garjita_ds garjita_ds      4096 Jan 28 02:21 .codeoss
+drwxr-xr-x  3 garjita_ds garjita_ds      4096 Jan  3 08:05 .config
+drwxr-xr-x  2 garjita_ds garjita_ds      4096 Feb  2 05:15 .docker
+-rw-r--r--  1 garjita_ds garjita_ds   1254291 Jun 30  2022 green_tripdata_2022-01.parquet
+-rw-r--r--  1 garjita_ds garjita_ds   1428262 Jun 30  2022 green_tripdata_2022-02.parquet
+-rw-r--r--  1 garjita_ds garjita_ds   1615562 Jun 30  2022 green_tripdata_2022-03.parquet
+-rw-r--r--  1 garjita_ds garjita_ds   1570363 Aug 30  2022 green_tripdata_2022-04.parquet
+-rw-r--r--  1 garjita_ds garjita_ds   1589636 Aug 30  2022 green_tripdata_2022-05.parquet
+-rw-r--r--  1 garjita_ds garjita_ds   1529658 Aug 30  2022 green_tripdata_2022-06.parquet
+-rw-r--r--  1 garjita_ds garjita_ds   1312353 Nov 14  2022 green_tripdata_2022-07.parquet
+-rw-r--r--  1 garjita_ds garjita_ds   1346660 Nov 14  2022 green_tripdata_2022-08.parquet
+-rw-r--r--  1 garjita_ds garjita_ds   1445166 Nov 30  2022 green_tripdata_2022-09.parquet
+-rw-r--r--  1 garjita_ds garjita_ds   1444642 Dec 19  2022 green_tripdata_2022-10.parquet
+-rw-r--r--  1 garjita_ds garjita_ds   1270324 Jan 25  2023 green_tripdata_2022-11.parquet
+-rw-r--r--  1 garjita_ds garjita_ds   1519259 Mar 20  2023 green_tripdata_2022-12.parquet
+drwxr-xr-x 11 garjita_ds garjita_ds      4096 Feb  2 02:26 mage-ai-terraform-templates
+drwxr-xr-x  2 garjita_ds garjita_ds      4096 Jan 28 02:44 mybucket
+drwxr-xr-x  3 garjita_ds garjita_ds      4096 Jan 22 23:49 .npm
+-rw-r--r--  1 garjita_ds garjita_ds       807 Mar 27  2022 .profile
+-rw-r--r--  1 garjita_ds garjita_ds       913 Feb  9 09:05 README-cloudshell.txt
+drwxr-xr-x  2 garjita_ds garjita_ds      4096 Feb  2 02:38 .terraform.d
+-rw-------  1 garjita_ds garjita_ds     19815 Feb  2 10:18 .viminfo
+-rw-r--r--  1 garjita_ds garjita_ds 110439634 Jun 30  2022 yellow_tripdata_2019-01.parquet
+-rw-r--r--  1 garjita_ds garjita_ds 103356025 Jun 30  2022 yellow_tripdata_2019-02.parquet
+-rw-r--r--  1 garjita_ds garjita_ds 116017372 Jun 30  2022 yellow_tripdata_2019-03.parquet
+-rw-r--r--  1 garjita_ds garjita_ds 110139137 Jun 30  2022 yellow_tripdata_2019-04.parquet
+-rw-r--r--  1 garjita_ds garjita_ds 111478943 Jun 30  2022 yellow_tripdata_2019-05.parquet
+-rw-r--r--  1 garjita_ds garjita_ds 102903344 Jun 30  2022 yellow_tripdata_2019-06.parquet
+-rw-r--r--  1 garjita_ds garjita_ds  93877343 Jun 30  2022 yellow_tripdata_2019-07.parquet
+-rw-r--r--  1 garjita_ds garjita_ds  89999675 Jun 30  2022 yellow_tripdata_2019-08.parquet
+-rw-r--r--  1 garjita_ds garjita_ds  97110325 Jun 30  2022 yellow_tripdata_2019-09.parquet
+-rw-r--r--  1 garjita_ds garjita_ds 106293373 Jun 30  2022 yellow_tripdata_2019-10.parquet
+-rw-r--r--  1 garjita_ds garjita_ds 100872983 Jun 30  2022 yellow_tripdata_2019-11.parquet
+-rw-r--r--  1 garjita_ds garjita_ds 101044777 Jun 30  2022 yellow_tripdata_2019-12.parquet
+-rw-r--r--  1 garjita_ds garjita_ds  93562858 Jun 30  2022 yellow_tripdata_2020-01.parquet
+-rw-r--r--  1 garjita_ds garjita_ds  92134881 Jun 30  2022 yellow_tripdata_2020-02.parquet
+-rw-r--r--  1 garjita_ds garjita_ds  44442590 Jun 30  2022 yellow_tripdata_2020-03.parquet
+-rw-r--r--  1 garjita_ds garjita_ds   4442620 Jun 30  2022 yellow_tripdata_2020-04.parquet
+-rw-r--r--  1 garjita_ds garjita_ds   6229864 Jun 30  2022 yellow_tripdata_2020-05.parquet
+-rw-r--r--  1 garjita_ds garjita_ds   9505358 Jun 30  2022 yellow_tripdata_2020-06.parquet
+-rw-r--r--  1 garjita_ds garjita_ds  13387778 Jun 30  2022 yellow_tripdata_2020-07.parquet
+-rw-r--r--  1 garjita_ds garjita_ds  16601463 Jun 30  2022 yellow_tripdata_2020-08.parquet
+-rw-r--r--  1 garjita_ds garjita_ds  21381938 Jun 30  2022 yellow_tripdata_2020-09.parquet
+-rw-r--r--  1 garjita_ds garjita_ds  26306876 Jun 30  2022 yellow_tripdata_2020-10.parquet
+-rw-r--r--  1 garjita_ds garjita_ds  23583368 Jun 30  2022 yellow_tripdata_2020-11.parquet
+-rw-r--r--  1 garjita_ds garjita_ds  23020036 Jun 30  2022 yellow_tripdata_2020-12.parquet
 
 
 
-### Hands-on learning
+
 
