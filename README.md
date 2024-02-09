@@ -515,7 +515,7 @@ OPTIONS (
 ![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/ade14ff9-6307-4ae4-9ca3-c6d5ec1ca703)
 
 ![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/35ce1370-3cd6-4aef-a2b2-862a11b50499)
-
+```
 
 ### Regular Internal Table
 
@@ -527,12 +527,6 @@ SELECT * FROM nytaxi.external_yellow_tripdata;
 ![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/7b09d455-0455-42e6-953d-11a4c5758d7f)
 
 ### Partitions
-
-
-
-
-
-
 
 
 
