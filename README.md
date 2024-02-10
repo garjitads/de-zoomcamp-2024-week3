@@ -726,7 +726,217 @@ Here's a list of best practices for BigQuery:
         - This is due to how BigQuery works internally: the first table will be distributed evenly and the second table will be broadcasted to all the nodes. Check the Internals section for more details.
 
 
-Here are 2 identical queries, one for a partitioned table and the other for a partitioned and clustered table:
+## Machine Learning with BigQuery
 
+### Introduction to BigQuery ML
+
+BigQuery ML is a BQ feature which allows us to create and execute Machine Learning models using standard SQL queries, without additional knowledge of Python nor any other programming languages and without the need to export data into a different system.
+
+The pricing for BigQuery ML is slightly different and more complex than regular BigQuery. Some resources are free of charge up to a specific limit as part of the Google Cloud Free Tier. You may check the current pricing in this link.
+
+BQ ML offers a variety of ML models depending on the use case, as the image below shows:
+![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/b46ca3fb-7603-4a59-afc9-9b77e307b822)
+
+We will now create a few example queries to show how BQ ML works. Let's begin with creating a custom table:
+```
+CREATE OR REPLACE TABLE `nytaxi.yellow_tripdata_ml` (
+  `passenger_count` INTEGER,
+  `trip_distance` FLOAT64,
+  `PULocationID` STRING,
+  `DOLocationID` STRING,
+  `payment_type` STRING,
+  `fare_amount` FLOAT64,
+  `tolls_amount` FLOAT64,
+  `tip_amount` FLOAT64
+) AS (
+  SELECT passenger_count, trip_distance, CAST(PULocationID AS STRING), CAST(DOLocationID AS STRING), CAST(payment_type AS STRING), fare_amount, tolls_amount, tip_amount
+  FROM nytaxi.yellow_tripdata_partitoned
+  WHERE fare_amount != 0
+);
+```
+![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/e33eb00d-fd86-420d-9e3c-7052846cb109)
+![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/def7127e-4cd6-4e8a-8217-0bda9e5693df)
+
+- BQ supports feature preprocessing, both manual and automatic.
+- A few columns such as PULocationID are categorical in nature but are represented with integer numbers in the original table. We cast them as strings in order to get BQ to automatically preprocess them as categorical features that will be one-hot encoded.
+- Our target feature for the model will be tip_amount. We drop all records where tip_amount equals zero in order to improve training.
+
+Let's now create a simple linear regression model with default settings:
+```
+CREATE OR REPLACE MODEL nytaxi.tip_model
+OPTIONS (
+  model_type='linear_reg',
+  input_label_cols=['tip_amount'],
+  DATA_SPLIT_METHOD='AUTO_SPLIT'
+) AS
+SELECT
+  *
+FROM
+  nytaxi.yellow_tripdata_ml
+WHERE
+  tip_amount IS NOT NULL;
+```
+![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/23fd4954-1d45-4875-a456-d8e01f6ffeb2)
+![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/b3b67bc5-d52a-49ef-a251-2ba5252ce9cd)
+
+- The CREATE MODEL clause will create the taxi-rides-ny.nytaxi.tip_model model
+- The OPTIONS() clause contains all of the necessary arguments to create our model/
+    - model_type='linear_reg' is for specifying that we will create a linear regression model.
+    - input_label_cols=['tip_amount'] lets BQ know that our target feature is tip_amount. For linear regression models, target features must be real numbers.
+    - DATA_SPLIT_METHOD='AUTO_SPLIT' is for automatically splitting the dataset into train/test datasets.
+- The SELECT statement indicates which features need to be considered for training the model.
+    - Since we already created a dedicated table with all of the needed features, we simply select them all.
+- Running this query may take several minutes.
+- After the query runs successfully, the BQ explorer in the side panel will show all available models (just one in our case) with a special icon. Selecting a model will open a new tab with additional info such as model details, training graphs and evaluation metrics.
+
+We can also get a description of the features with the following query:
+```
+SELECT * FROM ML.FEATURE_INFO(MODEL `taxi-rides-ny.nytaxi.tip_model`);
+```
+- The output will be similar to describe() in Pandas.
+
+Model evaluation against a separate dataset is as follows:
+```
+SELECT
+  *
+FROM
+ML.EVALUATE(
+  MODEL `nytaxi.tip_model`, (
+    SELECT
+      *
+    FROM
+      `nytaxi.yellow_tripdata_ml`
+    WHERE
+      tip_amount IS NOT NULL
+  )
+);
+```
+![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/a13f8a33-cf33-4184-a983-3c29098e98c7)
+
+- This will output similar metrics to those shown in the model info tab but with the updated values for the evaluation against the provided dataset.
+- In this example we evaluate with the same dataset we used for training the model, so this is a silly example for illustration purposes.
+
+The main purpose of a ML model is to make predictions. A ML.PREDICT statement is used for doing them:
+```
+SELECT
+  *
+FROM
+ML.PREDICT(
+  MODEL `nytaxi.tip_model`, (
+    SELECT
+      *
+    FROM
+      `nytaxi.yellow_tripdata_ml`
+    WHERE
+      tip_amount IS NOT NULL
+  )
+);
+```
+![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/b4f6019b-621e-4fd8-8407-aca4a279a9e4)
+
+- The SELECT statement within ML.PREDICT provides the records for which we want to make predictions.
+- Once again, we're using the same dataset we used for training to calculate predictions, so we already know the actual tips for the trips, but this is just an example.
+
+Additionally, BQ ML has a special ML.EXPLAIN_PREDICT statement that will return the prediction along with the most important features that were involved in calculating the prediction for each of the records we want predicted.
+```
+SELECT
+  *
+FROM
+ML.EXPLAIN_PREDICT(
+  MODEL `nytaxi.tip_model`,(
+    SELECT
+      *
+    FROM
+      `nytaxi.yellow_tripdata_ml`
+    WHERE
+      tip_amount IS NOT NULL
+  ), STRUCT(3 as top_k_features)
+);
+```
+![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/e1ccd6fd-c1f2-4232-b208-19ed48a10c31)
+
+- This will return a similar output to the previous query but for each prediction, 3 additional rows will be provided with the most significant features along with the assigned weights for each feature.
+  
+Just like in regular ML models, BQ ML models can be improved with hyperparameter tuning. Here's an example query for tuning:
+```
+CREATE OR REPLACE MODEL `nytaxi.tip_hyperparam_model`
+OPTIONS (
+  model_type='linear_reg',
+  input_label_cols=['tip_amount'],
+  DATA_SPLIT_METHOD='AUTO_SPLIT',
+  num_trials=5,
+  max_parallel_trials=2,
+  l1_reg=hparam_range(0, 20),
+  l2_reg=hparam_candidates([0, 0.1, 1, 10])
+) AS
+SELECT
+*
+FROM
+`nytaxi.yellow_tripdata_ml`
+WHERE
+tip_amount IS NOT NULL;
+```
+![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/1cb57233-ae06-4872-9e6c-5994ad15dd8f)
+
+- We create a new model as normal but we add the num_trials option as an argument.
+- All of the regular arguments used for creating a model are available for tuning. In this example we opt to tune the L1 and L2 regularizations.
+
+All of the necessary reference documentation is available [in this link].(https://cloud.google.com/bigquery/docs/reference/libraries-overview)
+
+
+## BigQuery ML deployment
+
+ML models created within BQ can be exported and deployed to Docker containers running TensorFlow Serving.
+
+The following steps are based on this official tutorial. All of these commands are to be run from a terminal and the gcloud sdk must be installed.
+
+1. Authenticate to your GCP project.
+```
+gcloud auth login
+```
+
+2. Export the model to a Cloud Storage bucket.
+```
+bq --project_id taxi-rides-ny extract -m nytaxi.tip_model gs://taxi_ml_model/tip_model
+```
+
+3. Download the exported model files to a temporary directory.
+```
+mkdir /tmp/model
+
+gsutil cp -r gs://taxi_ml_model/tip_model /tmp/model
+```
+
+4. Create a version subdirectory
+```
+mkdir -p serving_dir/tip_model/1
+
+cp -r /tmp/model/tip_model/* serving_dir/tip_model/1
+
+# Optionally you may erase the temporary directoy
+rm -r /tmp/model
+```
+
+5. Pull the TensorFlow Serving Docker image
+```
+docker pull tensorflow/serving
+```
+
+6.Run the Docker image. Mount the version subdirectory as a volume and provide a value for the MODEL_NAME environment variable.
+```
+# Make sure you don't mess up the spaces!
+docker run \
+  -p 8501:8501 \
+  --mount type=bind,source=`pwd`/serving_dir/tip_model,target=/models/tip_model \
+  -e MODEL_NAME=tip_model \
+  -t tensorflow/serving &
+```
+
+7. With the image running, run a prediction with curl, providing values for the features used for the predictions.
+```
+curl \
+  -d '{"instances": [{"passenger_count":1, "trip_distance":12.2, "PULocationID":"193", "DOLocationID":"264", "payment_type":"2","fare_amount":20.4,"tolls_amount":0.0}]}' \
+  -X POST http://localhost:8501/v1/models/tip_model:predict
+```
 
 
