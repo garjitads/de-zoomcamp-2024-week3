@@ -27,7 +27,7 @@ Some alternatives to BigQuery from other cloud providers would be AWS Redshift o
 
 [Source]: (https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page)
 
-Files : yellow_tripdata_2019-*.parquet & yellow_tripdata_2020-*.parquet
+Files : yellow_tripdata_2019-*.csv.gz & yellow_tripdata_2020-*.csv.gz
 
 **wget**
 
