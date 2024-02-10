@@ -883,6 +883,11 @@ tip_amount IS NOT NULL;
 
 All of the necessary reference documentation is available [in this link].(https://cloud.google.com/bigquery/docs/reference/libraries-overview)
 
+![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/57a96cb1-44ef-4d1e-b94a-837c5afa9d8e)
+
+![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/2ad8edbf-55f2-45a5-ba09-44341d2c0d48)
+![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/0f47476b-736f-47be-bb94-ba14aa2cfcc7)
+
 
 ## BigQuery ML deployment
 
