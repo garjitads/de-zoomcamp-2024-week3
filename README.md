@@ -19,9 +19,10 @@ BigQuery (BQ) is a Data Warehouse solution offered by Google Cloud Platform.
 
 Some alternatives to BigQuery from other cloud providers would be AWS Redshift or Azure Synapse Analytics.
 
-### Hands-on learning
 
-#### wget datasets and load into a bucket
+### Preparing Dataset Files
+
+#### wget (source --> gcs folder)
 
 Source: https://github.com/DataTalksClub/nyc-tlc-data/releases
 
@@ -30,8 +31,6 @@ Files : yellow_tripdata_2019-*.csv.gz & yellow_tripdata_2020-*.csv.gz
 Activate Cloud Shell
 
 ![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/920d51f2-100c-4665-8954-17fb738853af)
-
-**Download dataset files using wget command**
 
 ```
 $ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-01.csv.gz
@@ -489,7 +488,8 @@ yellow_tripdata_2020-12.csv.gz     100%[========================================
 2024-02-09 12:53:40 (16.3 MB/s) - ‘yellow_tripdata_2020-12.csv.gz’ saved [26524738/26524738]
 ```
 
-**Copy files into a bucket**
+#### gsutil cp (gcs folder to gcs bucket)
+
 ```
 $ gsutil -m cp yellow*.csv.gz gs://de-zoomcamp-garjita-bucket/trip_data
 Copying file://yellow_tripdata_2019-01.csv.gz [Content-Type=text/csv]...
@@ -524,7 +524,7 @@ Operation completed over 24 objects/1.9 GiB.
 ![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/798decc0-6f92-4c1c-a3f8-bc698cc3e082)
 
 
-## External tables
+### External tables
 BigQuery supports a few external data sources: you may query these sources directly from BigQuery even though the data itself isn't stored in BQ.
 
 An external table is a table that acts like a standard BQ table. The table metadata (such as the schema) is stored in BQ storage but the data itself is external.
@@ -898,7 +898,7 @@ All of the necessary reference documentation is available [in this link].(https:
 ![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/72470d29-64de-4922-92b3-3102b108c6b3)
 
 
-## BigQuery ML deployment
+### BigQuery ML deployment
 
 ML models created within BQ can be exported and deployed to Docker containers running TensorFlow Serving.
 
@@ -960,5 +960,3 @@ Example:
     ]
 }
 ```
-
-
