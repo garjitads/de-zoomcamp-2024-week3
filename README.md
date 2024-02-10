@@ -1,10 +1,8 @@
 ## Data Warehouse
 
-Source: (https://github.com/ziritrion/dataeng-zoomcamp/blob/main/notes/3_data_warehouse.md)
-
 ### What is a Data Warehouse?
 
-A Data Warehouse (DW) is an OLAP solution meant for reporting and data analysis. Unlike Data Lakes, which follow the ELT model, DWs commonly use the ETL model which was explained in lesson 2.
+A Data Warehouse (DW) is an OLAP solution meant for reporting and data analysis. Unlike Data Lakes, which follow the Extract Load Transform (ELT) model, DWs commonly use the Extract Transform Load (ETL) model.
 
 A DW receives data from different data sources which is then processed in a staging area before being ingested to the actual warehouse (a database) and arranged as needed. DWs may then feed data to separate Data Marts; smaller database systems which end users may use for different purposes.
 
@@ -25,7 +23,7 @@ Some alternatives to BigQuery from other cloud providers would be AWS Redshift o
 
 #### wget datasets and load into a bucket
 
-[Source]: (https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page)
+Source: https://github.com/DataTalksClub/nyc-tlc-data/releases
 
 Files : yellow_tripdata_2019-*.csv.gz & yellow_tripdata_2020-*.csv.gz
 
