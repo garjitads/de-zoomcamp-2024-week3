@@ -585,7 +585,7 @@ BQ will identify partitioned tables with a specific icon. The Details tab of the
 Querying a partitioned table is identical to querying a non-partitioned table, but the amount of processed data may be drastically different. Here are 2 identical queries to the non-partitioned and partitioned tables we created in the previous queries:
 ```
 SELECT DISTINCT(VendorID)
-FROM taxi-rides-ny.nytaxi.yellow_tripdata_non_partitoned
+FROM nytaxi.yellow_tripdata_non_partitoned
 WHERE DATE(tpep_pickup_datetime) BETWEEN '2019-06-01' AND '2019-06-30';
 ```
 
@@ -598,7 +598,7 @@ WHERE DATE(tpep_pickup_datetime) BETWEEN '2019-06-01' AND '2019-06-30';
 
 ```
 SELECT DISTINCT(VendorID)
-FROM taxi-rides-ny.nytaxi.yellow_tripdata_partitoned
+FROM nytaxi.yellow_tripdata_partitoned
 WHERE DATE(tpep_pickup_datetime) BETWEEN '2019-06-01' AND '2019-06-30';
 ```
 
@@ -775,7 +775,7 @@ WHERE
 ![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/23fd4954-1d45-4875-a456-d8e01f6ffeb2)
 ![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/b3b67bc5-d52a-49ef-a251-2ba5252ce9cd)
 
-- The CREATE MODEL clause will create the taxi-rides-ny.nytaxi.tip_model model
+- The CREATE MODEL clause will create the nytaxi.tip_model model
 - The OPTIONS() clause contains all of the necessary arguments to create our model/
     - model_type='linear_reg' is for specifying that we will create a linear regression model.
     - input_label_cols=['tip_amount'] lets BQ know that our target feature is tip_amount. For linear regression models, target features must be real numbers.
@@ -787,7 +787,7 @@ WHERE
 
 We can also get a description of the features with the following query:
 ```
-SELECT * FROM ML.FEATURE_INFO(MODEL `taxi-rides-ny.nytaxi.tip_model`);
+SELECT * FROM ML.FEATURE_INFO(MODEL `nytaxi.tip_model`);
 ```
 - The output will be similar to describe() in Pandas.
 
