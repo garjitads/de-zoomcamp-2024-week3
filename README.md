@@ -934,4 +934,11 @@ curl \
   -X POST http://localhost:8501/v1/models/tip_model:predict
 ```
 
+Example: 
+{
+    "predictions": [[0.2497064033370151]
+    ]
+}
+
+
 
