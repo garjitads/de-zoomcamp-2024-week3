@@ -28,9 +28,11 @@ Source: https://github.com/DataTalksClub/nyc-tlc-data/releases
 Files : yellow_tripdata_2019-*.csv.gz & yellow_tripdata_2020-*.csv.gz
 
 Activate Cloud Shell
+
 ![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/920d51f2-100c-4665-8954-17fb738853af)
 
 **Download dataset files using wget command**
+
 ```
 $ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-01.csv.gz
 --2024-02-09 12:33:17--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-01.csv.gz
@@ -517,6 +519,7 @@ Copying file://yellow_tripdata_2020-12.csv.gz [Content-Type=text/csv]...
 - [24/24 files][  1.9 GiB/  1.9 GiB] 100% Done 169.3 MiB/s ETA 00:00:00         
 Operation completed over 24 objects/1.9 GiB.  
 ```
+
 ![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/971a2190-9115-49fc-bde6-ac8007538a90)
 ![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/798decc0-6f92-4c1c-a3f8-bc698cc3e082)
 
@@ -546,6 +549,7 @@ You may import an external table into BQ as a regular internal table by copying 
 CREATE OR REPLACE TABLE nytaxi.yellow_tripdata_non_partitoned AS
 SELECT * FROM nytaxi.external_yellow_tripdata;
 ```
+
 ![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/7b09d455-0455-42e6-953d-11a4c5758d7f)
 
 
@@ -572,6 +576,7 @@ PARTITION BY
   DATE(tpep_pickup_datetime) AS
 SELECT * FROM nytaxi.external_yellow_tripdata;
 ```
+
 ![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/af2f9fb1-529e-49c7-8f46-901f35557b80)
 ![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/3bc8a1af-1e3d-43c3-9598-1b0dee7e5f38)
 
@@ -583,6 +588,7 @@ SELECT DISTINCT(VendorID)
 FROM taxi-rides-ny.nytaxi.yellow_tripdata_non_partitoned
 WHERE DATE(tpep_pickup_datetime) BETWEEN '2019-06-01' AND '2019-06-30';
 ```
+
 ![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/fc65f9f3-dd34-47fe-9ed5-04081692de65)
 
 - Query to non-partitioned table.
@@ -595,6 +601,7 @@ SELECT DISTINCT(VendorID)
 FROM taxi-rides-ny.nytaxi.yellow_tripdata_partitoned
 WHERE DATE(tpep_pickup_datetime) BETWEEN '2019-06-01' AND '2019-06-30';
 ```
+
 ![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/10d8e0ed-f0cf-4f94-b01e-c98ba187e036)
 
 - Query to partitioned table.
@@ -639,10 +646,12 @@ PARTITION BY DATE(tpep_pickup_datetime)
 CLUSTER BY VendorID AS
 SELECT * FROM nytaxi.external_yellow_tripdata;
 ```
+
 ![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/8b51adc2-f12d-49b3-8c97-856926fc6975)
 ![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/504e5dc9-8d51-4ffa-a41d-b42f2f0280d1)
 
 Just like for partitioned tables, the Details tab for the table will also display the fields by which the table is clustered.
+
 ![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/e02ed5e6-c1b5-4e97-8fb1-3dda6e6d538d)
 ![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/068de331-1ec0-48c1-ad8b-0c3e5ddd7828)
 
@@ -655,6 +664,7 @@ WHERE DATE(tpep_pickup_datetime) BETWEEN '2019-06-01' AND '2020-12-31'
 ```
 - Query to non-clustered, partitioned table.
 - This will process about 1.1GB of data.
+
 ![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/846337c1-e463-4414-9c2c-5313a5482691)
 
 ```
@@ -665,6 +675,7 @@ WHERE DATE(tpep_pickup_datetime) BETWEEN '2019-06-01' AND '2020-12-31'
 ```
 - Query to partitioned and clustered data.
 - This will process about 865MB of data.
+
 ![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/18ba29b0-b54c-4b87-ae7c-072e05d47552)
 
 
@@ -716,6 +727,7 @@ BigQuery ML is a BQ feature which allows us to create and execute Machine Learni
 The pricing for BigQuery ML is slightly different and more complex than regular BigQuery. Some resources are free of charge up to a specific limit as part of the Google Cloud Free Tier. You may check the current pricing in this link.
 
 BQ ML offers a variety of ML models depending on the use case, as the image below shows:
+
 ![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/b46ca3fb-7603-4a59-afc9-9b77e307b822)
 
 We will now create a few example queries to show how BQ ML works. Let's begin with creating a custom table:
@@ -731,10 +743,12 @@ CREATE OR REPLACE TABLE `nytaxi.yellow_tripdata_ml` (
   `tip_amount` FLOAT64
 ) AS (
   SELECT passenger_count, trip_distance, CAST(PULocationID AS STRING), CAST(DOLocationID AS STRING), CAST(payment_type AS STRING), fare_amount, tolls_amount, tip_amount
+
   FROM nytaxi.yellow_tripdata_partitoned
   WHERE fare_amount != 0
 );
 ```
+
 ![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/e33eb00d-fd86-420d-9e3c-7052846cb109)
 ![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/def7127e-4cd6-4e8a-8217-0bda9e5693df)
 
@@ -757,6 +771,7 @@ FROM
 WHERE
   tip_amount IS NOT NULL;
 ```
+
 ![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/23fd4954-1d45-4875-a456-d8e01f6ffeb2)
 ![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/b3b67bc5-d52a-49ef-a251-2ba5252ce9cd)
 
@@ -792,6 +807,7 @@ ML.EVALUATE(
   )
 );
 ```
+
 ![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/a13f8a33-cf33-4184-a983-3c29098e98c7)
 
 - This will output similar metrics to those shown in the model info tab but with the updated values for the evaluation against the provided dataset.
@@ -813,6 +829,7 @@ ML.PREDICT(
   )
 );
 ```
+
 ![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/b4f6019b-621e-4fd8-8407-aca4a279a9e4)
 
 - The SELECT statement within ML.PREDICT provides the records for which we want to make predictions.
@@ -834,6 +851,7 @@ ML.EXPLAIN_PREDICT(
   ), STRUCT(3 as top_k_features)
 );
 ```
+
 ![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/e1ccd6fd-c1f2-4232-b208-19ed48a10c31)
 
 - This will return a similar output to the previous query but for each prediction, 3 additional rows will be provided with the most significant features along with the assigned weights for each feature.
@@ -857,6 +875,7 @@ FROM
 WHERE
 tip_amount IS NOT NULL;
 ```
+
 ![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/1cb57233-ae06-4872-9e6c-5994ad15dd8f)
 
 --> *Solved by creating a new project & dataset in new reqion. Here I use EU region.*
@@ -867,11 +886,11 @@ tip_amount IS NOT NULL;
 All of the necessary reference documentation is available [in this link].(https://cloud.google.com/bigquery/docs/reference/libraries-overview)
 
 ![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/57a96cb1-44ef-4d1e-b94a-837c5afa9d8e)
-
 ![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/2ad8edbf-55f2-45a5-ba09-44341d2c0d48)
 ![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/0f47476b-736f-47be-bb94-ba14aa2cfcc7)
 
 **My Asia Region Dataset**
+
 ![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/3ebb5913-e928-425e-b1bc-9ca77fcfb1dd)
 
 **My EU Region Dataset**
