@@ -27,8 +27,10 @@ Source: https://github.com/DataTalksClub/nyc-tlc-data/releases
 
 Files : yellow_tripdata_2019-*.csv.gz & yellow_tripdata_2020-*.csv.gz
 
-**wget**
+Activate Cloud Shell
+![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/920d51f2-100c-4665-8954-17fb738853af)
 
+**Download dataset files using wget command**
 ```
 $ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-01.csv.gz
 --2024-02-09 12:33:17--  https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2019-01.csv.gz
@@ -857,6 +859,8 @@ tip_amount IS NOT NULL;
 ```
 ![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/1cb57233-ae06-4872-9e6c-5994ad15dd8f)
 
+--> *Solved by creating a new project & dataset in new reqion. Here I use EU region.*
+
 - We create a new model as normal but we add the num_trials option as an argument.
 - All of the regular arguments used for creating a model are available for tuning. In this example we opt to tune the L1 and L2 regularizations.
 
@@ -866,6 +870,13 @@ All of the necessary reference documentation is available [in this link].(https:
 
 ![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/2ad8edbf-55f2-45a5-ba09-44341d2c0d48)
 ![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/0f47476b-736f-47be-bb94-ba14aa2cfcc7)
+
+**My Asia Region Dataset**
+![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/3ebb5913-e928-425e-b1bc-9ca77fcfb1dd)
+
+**My EU Region Dataset**
+
+![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/72470d29-64de-4922-92b3-3102b108c6b3)
 
 
 ## BigQuery ML deployment
@@ -881,14 +892,14 @@ gcloud auth login
 
 2. Export the model to a Cloud Storage bucket.
 ```
-bq --project_id taxi-rides-ny extract -m nytaxi.tip_model gs://taxi_ml_model/tip_model
+bq --project_id my-project-multi-region extract -m nytaxi_eu.tip_model gs://taxi_ml_model63/tip_model
 ```
 
 3. Download the exported model files to a temporary directory.
 ```
 mkdir /tmp/model
 
-gsutil cp -r gs://taxi_ml_model/tip_model /tmp/model
+gsutil cp -r gs://taxi_ml_model63/tip_model /tmp/model
 ```
 
 4. Create a version subdirectory
