@@ -555,6 +555,12 @@ SELECT * FROM nytaxi.external_yellow_tripdata;
 
 ### Partitions
 
+When we create a dataset, we generally have one or more columns that are used as some type of filter (usually columns in where clause). In this case, we can partition a table based on such columns to improve BigQuery's performance. In this lesson, the instructor shows us an example of a dataset containing StackOverflow questions (left), and how the dataset would look like if it was partitioned by the Creation_date field (right).
+
+Partitioning is a powerful feature of BigQuery. Suppose we want to query the questions created on a specific date. Partition improves processing, because BigQuery will not read or process any data from other dates. This improves efficiency and reduces querying costs.
+
+![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/03dfe45a-b014-40f7-ba82-31c5318302a1)
+
 BQ tables can be partitioned into multiple smaller tables. For example, if we often filter queries based on date, we could partition a table based on date so that we only query a specific sub-table based on the date we're interested in.
 
 Partition tables are very useful to improve performance and reduce costs, because BQ will not process as much data per query.
@@ -620,6 +626,10 @@ This is useful to check if there are data imbalances and/or biases in your parti
 
 
 ### Clustering
+
+We can cluster tables based on some field. In the StackOverflow example presented by the instructor, after partitioning questions by date, we may want to cluster them by tag in each partition. Clustering also helps us to reduce our costs and improve query performance. The field that we choose for clustering depends on how the data will be queried.
+
+![image](https://github.com/garjitads/de-zoomcamp-2024-week3/assets/157445647/8c75cd3b-9141-4619-b903-50a95133d8ac)
 
 Clustering consists of rearranging a table based on the values of its columns so that the table is ordered according to any criteria. Clustering can be done based on one or multiple columns up to 4; the order of the columns in which the clustering is specified is important in order to determine the column priority.
 
