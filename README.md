@@ -555,7 +555,7 @@ SELECT * FROM nytaxi.external_yellow_tripdata;
 
 ### Partitions
 
-When we create a dataset, we generally have one or more columns that are used as some type of filter (usually columns in where clause). In this case, we can partition a table based on such columns to improve BigQuery's performance. In this lesson, the instructor shows us an example of a dataset containing StackOverflow questions (left), and how the dataset would look like if it was partitioned by the Creation_date field (right).
+When we create a dataset, we generally have one or more columns that are used as some type of filter (usually column(s) in where clause). In this case, we can partition a table based on such columns to improve BigQuery's performance. In this lesson, the instructor shows us an example of a dataset containing StackOverflow questions (left), and how the dataset would look like if it was partitioned by the Creation_date field (right).
 
 Partitioning is a powerful feature of BigQuery. Suppose we want to query the questions created on a specific date. Partition improves processing, because BigQuery will not read or process any data from other dates. This improves efficiency and reduces querying costs.
 
